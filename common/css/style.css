@@ -42,13 +42,82 @@ h5{
 h6{
 }
 
-/*header*/
-.header-inner{
-	width: 1200px;
-	margin: 0px auto;
-	display:flex;
+/*mark*/
+.mark-red {
+background: linear-gradient(transparent 50%, #ffccd5 50%);
+}
+.mark-pink {
+background: linear-gradient(transparent 50%, #ff99ff 50%);
+}
+.mark-yellow {
+background: linear-gradient(transparent 50%, #ffff66 50%);
+}
+.mark-green {
+background: linear-gradient(transparent 50%, #beedbe 50%);
+}
+.mark-blue{
+background: linear-gradient(transparent 50%, #a3ffff 50%);
 }
 
+/*header*/
+header{
+}
+.header-inner{
+	max-width: 1200px;
+	margin: 0px auto;
+	display:flex;
+	justify-content:space-between;
+}
+.header-inner a{
+	color:#333;
+}
+.logo img{
+	width:80px;
+}
+.global-nav ul li{
+display:inline-block;
+}
+
+.global-nav ul li{
+display:inline-block;
+}
+.reservations{
+text-align:center;
+display:flex;
+align-items: center;
+}
+.reservations div{
+padding:5px;
+width:90px;
+position:relative;
+}
+.reservations div::after{
+content: "";
+background-color: #ffb52d8c;
+width: 50px;
+height: 50px;
+border-radius: 32px;
+box-shadow: 0px 0px 25px #e6a209;
+display: none;
+position: absolute;
+top: 12px;
+left: 17px;
+z-index: -1;
+}
+.reservations div:hover::after{
+display:block;
+}
+.reservations div:first-child{
+margin-right:8px
+}
+.reservations i{
+font-size:36px;
+display:block;
+padding-bottom:4px;
+}
+.reservations span{
+	font-size:14px;
+}
 /*footer*/
 .footer-inner{
 	width: 1200px;
@@ -58,8 +127,13 @@ h6{
 
 /*top*/
 .main-vis{
-  background-image: url(./common/images/main.jpg);
-  height:423px;
+  background-image: url(../images/main-vis.jpg);
+  background-position:fixed;
+  height:400px;
+}
+.recomends{
+display:flex;
+justify-content:center;
 }
 .sentence{
 	text-align: center;
@@ -107,20 +181,20 @@ iframe{
 }
 
 /*info*/
-.info .infoInner{
+.info .info-inner{
     float: left;
     list-style-position: inside;
     margin: 0px 70px 20px 70px;
 }
 
 /*form*/
-#yoyakuPhoto h1{
+#yoyaku-photo h1{
 	font-size:48px;
 	margin-top:70px;
 	margin-left: 60px;
 	float: left;
 }
-#yoyakuPhoto img{
+#yoyaku-photo img{
 	float: right;
 }
 #yoyaku h3{
@@ -169,10 +243,10 @@ iframe{
   content:"";
   color:#f00;
 }
-#yoyaku #sousinBtn{
+#yoyaku #sousin-btn{
   margin-top:30px;
 }
-#sousinBtn{
+#sousin-btn{
 	background-color: #007e0f;
 	color: #fff;
 	width:200px;
@@ -183,7 +257,7 @@ iframe{
 	font-size: 30px;
 	font-weight: bold;
 }
-#sousinBtn:hover{
+#sousin-btn:hover{
 	background-color:#fff;
   color:#007e0f;
   cursor: pointer;
@@ -191,22 +265,22 @@ iframe{
 /*予約フォーム終わり*/
 
 /*商品情報始まり*/
-#shouhinInfo{
+#shouhin-info{
   width: 700px;
   float: left;
 	margin-top: 30px;
 }
-#shouhinInfo ul li{
+#shouhin-info ul li{
   float: left;
   list-style: none;
   margin: 10px 20px 20px 20px;
   text-align: center;
 }
-#shouhinInfo section{
+#shouhin-info section{
 	margin-top:20px;
 	margin-left:20px;
 }
-#shouhin #dogNav{
+#shouhin #dog-nav{
   width: 200px;
 	margin: 30px 0px 0px 750px;
 	text-align: center;
