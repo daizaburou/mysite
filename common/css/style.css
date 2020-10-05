@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /*common*/
-
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
   margin:0;
   padding:0;
@@ -63,7 +62,9 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
 header{
 }
 .header-inner{
-	max-width: 1200px;
+	max-width: 1240px;
+	padding-left:20px;
+	padding-right:20px;
 	margin: 0px auto;
 	display:flex;
 	justify-content:space-between;
@@ -118,9 +119,18 @@ padding-bottom:4px;
 .reservations span{
 	font-size:14px;
 }
+/*main*/
+.main-content{
+	width:1240px;
+	padding-right:20px;
+	padding-left:20px;
+}
+
 /*footer*/
 .footer-inner{
-	width: 1200px;
+	max-width: 1240px;
+	padding-left:20px;
+	padding-right:20px;
 	margin: 0px auto;
 }
 /*end:common*/
