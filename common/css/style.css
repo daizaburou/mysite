@@ -142,7 +142,7 @@ padding-bottom:4px;
 /*top*/
 .main-vis{
   background-image: url(../images/main-vis.jpg);
-  background-position:fixed;
+  background-position:fix;
   height:400px;
 }
 .recomends{
