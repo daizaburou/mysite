@@ -44,20 +44,20 @@ h5{
 h6{
 }
 
-/*mark*/
-.mark-red {
+/*marker*/
+.marker-red {
 background: linear-gradient(transparent 50%, #ffccd5 50%);
 }
-.mark-pink {
+.marker-pink {
 background: linear-gradient(transparent 50%, #ff99ff 50%);
 }
-.mark-yellow {
+.marker-yellow {
 background: linear-gradient(transparent 50%, #ffff66 50%);
 }
-.mark-green {
+.marker-green {
 background: linear-gradient(transparent 50%, #beedbe 50%);
 }
-.mark-blue{
+.marker-blue{
 background: linear-gradient(transparent 50%, #a3ffff 50%);
 }
 
