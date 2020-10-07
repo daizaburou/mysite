@@ -61,40 +61,64 @@ position:fixed;
 top:20px;
 right:20px;
 }
-
+@media (max-width: 767px){
+.hamburger{
+height: 100%;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:100%;
+    transition: all 0.6s;
+    opacity:0;
+}
+.hamburger.active{
+    transform: translatex(-100%);
+    opacity: 1;
+}
+.g-nav li{
+opacity:0;
+transition: all 0.6s;
+}
+.g-nav.active li{
+opacity:1;
+}
+}
+@media (min-width: 768px){
+#btn01{
+display:none;
+}
+}
+ul,ol{
+list-style:none;
+}
+a{
+text-decoration:none;
+color:#000;
+}
 </style>
 <body>
 <header>
 <div class="header-inner">
     <div><h1>サイト内におけるタイトル</h1></div>
+<div class="hamburger">
 <div class="g-nav">
 <nav>
   <ul>
-    <li><a href="#">ナビ1</a></li>
-    <li><a href="#">ナビ2</a></li>
-    <li><a href="#">ナビ3</a></li>
-    <li><a href="#">ナビ4</a></li>
+    <li style="transition-delay:.5s;"><a href="#">ナビ1</a></li>
+    <li style="transition-delay:.55s;"><a href="#">ナビ2</a></li>
+    <li style="transition-delay:.6s;"><a href="#">ナビ3</a></li>
+    <li style="transition-delay:.65s;"><a href="#">ナビ4</a></li>
   </ul>
 </nav>
 </div >
-<div class="g-nav">
-<nav>
-  <ul>
-    <li><a href="#">ナビ1</a></li>
-    <li><a href="#">ナビ2</a></li>
-    <li><a href="#">ナビ3</a></li>
-    <li><a href="#">ナビ4</a></li>
-  </ul>
-</nav>
 </div >
 </div>
-
 <div class="btn-trigger" id="btn01">
     <span></span>
     <span></span>
     <span></span>
 </div>
-
 </header>
 <section>
 </section>
@@ -625,6 +649,8 @@ right:20px;
   $(function(){
   $('.btn-trigger').on('click', function() {
     $(this).toggleClass('active');
+    $('.hamburger').toggleClass('active');
+    $('.g-nav').toggleClass('active');
     return false;
   });
 });
