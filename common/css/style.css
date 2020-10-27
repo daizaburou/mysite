@@ -78,12 +78,31 @@ header{
 .logo img{
 	width:80px;
 }
+.global-nav{
+font-size: 26px;
+display: flex;
+align-items: center;
+}
 .global-nav ul li{
 display:inline-block;
 }
-
-.global-nav ul li{
-display:inline-block;
+.global-nav ul li a:before {
+position: absolute;
+content: "";
+width: 6px;
+height: 6px;
+background-color: #282828;
+top: 16px;
+left: 50%;
+margin-left: -3px;
+border-radius: 50%;
+opacity: 0;
+-webkit-transition: opacity .3s ease,top .3s ease;
+transition: opacity .3s ease,top .3s ease;
+}
+.global-nav ul li:hover a:before {
+top: -3px;
+opacity: 1;
 }
 .reservations{
 text-align:center;
