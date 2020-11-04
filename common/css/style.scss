@@ -79,7 +79,8 @@ header{
 	width:80px;
 }
 .global-nav{
-font-size: 22px;
+padding-bottom: 12px;
+font-size: 18px;
 display: flex;
 align-items: center;
 ul li{
@@ -113,9 +114,10 @@ ul li{
 .opening-hours{
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-end;
+font-size: 18px;
 p{
-  margin-bottm:6px;
+  margin-bottom:10px;
   span{
     margin-right:6px;
   }

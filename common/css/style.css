@@ -63,7 +63,8 @@ h3::before {
   width: 80px; }
 
 .global-nav {
-  font-size: 22px;
+  padding-bottom: 12px;
+  font-size: 18px;
   display: flex;
   align-items: center; }
   .global-nav ul li {
