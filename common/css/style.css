@@ -22,7 +22,9 @@ h1 {
   font-size: 48px; }
 
 h2 {
-  font-size: 36px; }
+  font-size: 36px;
+  margin-top: 5px;
+  margin-bottom: 20px; }
 
 h3 {
   font-size: 24px; }
@@ -66,7 +68,7 @@ h3::before {
   padding-bottom: 12px;
   font-size: 18px;
   display: flex;
-  align-items: center; }
+  align-items: flex-end; }
   .global-nav ul li {
     display: inline-block;
     margin-top: 5px;
@@ -92,9 +94,10 @@ h3::before {
 .opening-hours {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: flex-end;
+  font-size: 18px; }
   .opening-hours p {
-    margin-bottm: 6px; }
+    margin-bottom: 10px; }
     .opening-hours p span {
       margin-right: 6px; }
     .opening-hours p:first-child span {
@@ -140,6 +143,18 @@ h3::before {
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto; }
+
+.commitment {
+  background-color: #fffbed;
+  border: solid 2px #9c6836;
+  padding: 16px;
+  border-radius: 4px; }
+
+.toggle {
+  display: none; }
+
+.toggle-btn {
+  cursor: pointer; }
 
 /*footer*/
 .footer-inner {

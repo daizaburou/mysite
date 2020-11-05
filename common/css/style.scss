@@ -26,7 +26,9 @@ h1{
 	font-size: 48px;
 }
 h2{
-	font-size: 36px;
+  font-size: 36px;
+  margin-top:5px;
+  margin-bottom:20px;
 }
 h3{
 	font-size: 24px;
@@ -82,7 +84,7 @@ header{
 padding-bottom: 12px;
 font-size: 18px;
 display: flex;
-align-items: center;
+align-items: flex-end;
 ul li{
   display:inline-block;
   margin-top: 5px;
@@ -130,7 +132,6 @@ p{
 
 }
 }
-
 .reservations{
 text-align:center;
 display:flex;
@@ -176,6 +177,21 @@ div{
 	padding-left:20px;
 	margin:0 auto;
 }
+//--commitment--//
+.commitment{
+background-color: #fffbed;
+border: solid 2px #9c6836;
+padding: 16px;
+border-radius:4px;
+}
+//--toggle--//
+.toggle{
+display:none;
+}
+.toggle-btn{
+cursor:pointer;
+}
+
 
 /*footer*/
 .footer-inner{
