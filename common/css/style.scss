@@ -183,6 +183,21 @@ background-color: #fffbed;
 border: solid 2px #9c6836;
 padding: 16px;
 border-radius:4px;
+position:relative;
+&::after,
+&::before, {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: '';
+    border-top: 2px dotted #9c6836;
+  }
+  &::before, {
+    top: 6px;
+  }
+  &::after, {
+    bottom: 6px;
+  }
 }
 //--toggle--//
 .toggle{

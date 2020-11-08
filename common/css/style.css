@@ -148,7 +148,18 @@ h3::before {
   background-color: #fffbed;
   border: solid 2px #9c6836;
   padding: 16px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  position: relative; }
+  .commitment::after, .commitment::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: '';
+    border-top: 2px dotted #9c6836; }
+  .commitment::before {
+    top: 6px; }
+  .commitment::after {
+    bottom: 6px; }
 
 .toggle {
   display: none; }
