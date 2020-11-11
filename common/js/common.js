@@ -16,6 +16,10 @@
         $('.first-view').addClass('-fade-out');
       }
       $(window).on('load',function(){
-      setTimeout(fadeOut, 1500);
+        if( !localStorage.getItem('first-view') ) {
+            $('first-view').css("display","block");
+            localStorage.setItem('first-view', 'on');
+        setTimeout(fadeOut, 1000);
+        }
     });
     })(jQuery);

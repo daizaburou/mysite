@@ -187,6 +187,7 @@ div{
   z-index:50;
   opacity:1;
   transition:all 1s;
+  display:none;
   .content{
     position:absolute;
     top:50%;
@@ -200,6 +201,7 @@ div{
   } 
   &.-fade-out{
     opacity:0;
+    pointer-events:none;
     }
 }
 
