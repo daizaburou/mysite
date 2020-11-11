@@ -17,9 +17,9 @@
       }
       $(window).on('load',function(){
         if( !localStorage.getItem('first-view') ) {
-            $('first-view').css("display","block");
+            $('.first-view').css("display","block");
+            setTimeout(fadeOut, 1000);
             localStorage.setItem('first-view', 'on');
-        setTimeout(fadeOut, 1000);
         }
     });
     })(jQuery);
