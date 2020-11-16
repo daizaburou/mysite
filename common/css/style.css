@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*common*/
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -14,7 +12,6 @@ ul, ol {
 a {
   text-decoration: none; }
 
-/*hdg*/
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Noto Serif JP', serif; }
 
@@ -34,7 +31,9 @@ h3::before {
   padding-right: 10px;
   border-left: 7px solid #79542c; }
 
-/*marker*/
+p {
+  margin-bottom: 12px; }
+
 .marker-red {
   background: linear-gradient(transparent 50%, #ffccd5 50%); }
 
@@ -50,7 +49,32 @@ h3::before {
 .marker-blue {
   background: linear-gradient(transparent 50%, #a3ffff 50%); }
 
-/*header*/
+.link {
+  position: relative;
+  margin-right: 10px; }
+  .link::after {
+    content: "";
+    position: absolute;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    transform: rotate(45deg);
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    transition: margin .1s; }
+  .link:hover::after, .link:focus::after, .link:active::after {
+    margin-left: 10px; }
+
+.align-r {
+  text-align: right !important; }
+
+.align-c {
+  text-align: center !important; }
+
+.align-l {
+  text-align: left !important; }
+
 .header-inner {
   max-width: 1240px;
   padding-left: 20px;
@@ -137,7 +161,6 @@ h3::before {
   .reservations span {
     font-size: 14px; }
 
-/*main*/
 .main-content {
   width: 1240px;
   padding-right: 20px;
@@ -189,15 +212,12 @@ h3::before {
 .toggle-btn {
   cursor: pointer; }
 
-/*footer*/
 .footer-inner {
   max-width: 1240px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0px auto; }
 
-/*end:common*/
-/*top*/
 .main-vis {
   background-image: url(../images/main-vis.jpg);
   background-attachment: fixed;
@@ -218,7 +238,6 @@ h3::before {
   font-weight: bold;
   margin-top: 5px; }
 
-/*about*/
 iframe {
   width: 400px;
   height: 400px;
@@ -250,13 +269,11 @@ iframe {
   background-color: #fff;
   color: #007e0f; }
 
-/*info*/
 .info .info-inner {
   float: left;
   list-style-position: inside;
   margin: 0px 70px 20px 70px; }
 
-/*form*/
 #yoyaku-photo h1 {
   font-size: 48px;
   margin-top: 70px;
@@ -330,8 +347,6 @@ iframe {
   color: #007e0f;
   cursor: pointer; }
 
-/*予約フォーム終わり*/
-/*商品情報始まり*/
 #shouhin-info {
   width: 700px;
   float: left;
@@ -389,5 +404,3 @@ iframe {
 #shouhin figure small {
   color: #000;
   padding-left: 5px; }
-
-/*商品情報終わり*/
