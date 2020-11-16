@@ -16,10 +16,10 @@
         $('.first-view').addClass('-fade-out');
       }
       $(window).on('load',function(){
-        if( !localStorage.getItem('first-view') ) {
+        if( !sessionStorage.getItem('first-view') ) {
             $('.first-view').css("display","block");
             setTimeout(fadeOut, 1000);
-            localStorage.setItem('first-view', 'on');
+            sessionStorage.setItem('first-view', 'on');
         }
     });
     })(jQuery);
