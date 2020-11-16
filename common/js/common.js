@@ -12,14 +12,14 @@
     });
 
 //ファーストビュー
-    let fadeOut = function(){
-        $('.first-view').addClass('-fade-out');
-      }
       if( !sessionStorage.getItem('first-view') ) {
         $('.first-view').css("display","block");
       $(window).on('load',function(){
             setTimeout(fadeOut, 1000);
             sessionStorage.setItem('first-view', 'on');
         });
+      }
+      let fadeOut = function(){
+        $('.first-view').addClass('-fade-out');
       }
     })(jQuery);

@@ -208,10 +208,9 @@ div{
 
 //--commitment--//
 .commitment{
-background-color: #fffbed;
-border: solid 2px #9c6836;
+border-top: solid 2px #9c6836;
+border-bottom: solid 2px #9c6836;
 padding: 16px;
-border-radius:4px;
 position:relative;
 &::after,
 &::before, {
