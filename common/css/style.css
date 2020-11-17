@@ -176,7 +176,7 @@ p {
   z-index: 50;
   opacity: 1;
   transition: all 1s;
-  display: none; }
+  display: block; }
   .first-view .content {
     position: absolute;
     top: 50%;

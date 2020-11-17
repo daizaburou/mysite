@@ -219,7 +219,7 @@ div{
   z-index:50;
   opacity:1;
   transition:all 1s;
-  display:none;
+  display: block;
   .content{
     position:absolute;
     top:50%;

@@ -15,8 +15,10 @@ $('.toggle-btn-inner').each(function(){
   });
 
 //ファーストビュー
-      if( !sessionStorage.getItem('first-view') ) {
-        $('.first-view').css("display","block");
+      if(sessionStorage.getItem('first-view') ) {
+        $('.first-view').css("display","none");
+      }
+      else{
       $(window).on('load',function(){
             setTimeout(fadeOut, 1000);
             sessionStorage.setItem('first-view', 'on');
