@@ -32,7 +32,7 @@ h3::before {
   border-left: 7px solid #79542c; }
 
 p {
-  margin-bottom: 12px; }
+  margin-bottom: 16px; }
 
 .marker-red {
   background: linear-gradient(transparent 50%, #ffccd5 50%); }
@@ -210,7 +210,14 @@ p {
   display: none; }
 
 .toggle-btn {
-  cursor: pointer; }
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  .toggle-btn .toggle-btn-inner {
+    cursor: pointer;
+    background-color: #277900;
+    border-radius: 4px;
+    padding: 6px 20px;
+    color: #fff; }
 
 .footer-inner {
   max-width: 1240px;

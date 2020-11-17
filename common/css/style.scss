@@ -46,7 +46,7 @@ h6{
 }
 //pタグ//
 p{
-margin-bottom:12px;
+margin-bottom:16px;
 }
 //マーカー//
 .marker-red {
@@ -135,7 +135,6 @@ ul li{
       width: 15px;
       height: 15px;
       background-color: #ffb52d63;
-      //box-shadow: 0px 0px 14px #e6a209;
       top: 16px;
       left: 50%;
       transform: translateX(-50%);
@@ -163,7 +162,6 @@ p{
   &:nth-child(2) span{
     color:$sub-color;
   }
-
 }
 }
 .reservations{
@@ -266,9 +264,16 @@ position:relative;
 display:none;
 }
 .toggle-btn{
-cursor:pointer;
+  margin-top:20px;
+  margin-bottom:10px;
+  .toggle-btn-inner{
+    cursor: pointer;
+    background-color: #277900;
+    border-radius: 4px;
+    padding: 6px 20px;
+    color: #fff;
+  }
 }
-
 
 //footer//
 .footer-inner{
