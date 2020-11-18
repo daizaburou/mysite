@@ -218,6 +218,8 @@ p {
     border-radius: 4px;
     padding: 6px 20px;
     color: #fff; }
+    .toggle-btn .toggle-btn-inner .toggle-close {
+      display: none; }
 
 .footer-inner {
   max-width: 1240px;

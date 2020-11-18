@@ -1,18 +1,24 @@
 (function($){
+
 //スライドトグル
+const slideToggle = function(){
 $('.toggle-btn-inner').each(function(){
+    let openText = $(this).find('.toggle-open').text();
+    let closeText =  $(this).find('.toggle-close').text();
   $(this).on('click',function(){
     let target = $(this).data('target');
     let toggle = document.getElementById(target);
     $(toggle).slideToggle(200);
-    if($(this).text() === "続きを読む"){
-      $(this).text("省略する");
+    if($(this).text() !== closeText){
+      $(this).text(closeText);
         }
         else{
-          $(this).text("続きを読む");
+          $(this).text(openText);
         }
     });
   });
+}
+slideToggle();
 
 //ファーストビュー
       if(sessionStorage.getItem('first-view') ) {
