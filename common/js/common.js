@@ -8,7 +8,7 @@ $('.toggle-btn-inner').each(function(){
   $(this).on('click',function(){
     let target = $(this).data('target');
     let toggle = document.getElementById(target);
-    $(toggle).slideToggle(200);
+    $(toggle).slideToggle(300);
     if($(this).text() !== closeText){
       $(this).text(closeText);
         }
