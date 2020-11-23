@@ -33,4 +33,17 @@ slideToggle();
       let fadeOut = function(){
         $('.first-view').addClass('-fade-out');
       }
+
+//スクロールフェイドイン
+      $(window).on('scroll' , function(){
+        $('.scroll-fading').each(function(){
+            let elm = $(this);
+            let windowHeight = $(window).height();
+            let targetPosition = elm.offset().top - windowHeight;
+            if($(window).scrollTop() > targetPosition){
+            $(elm).addClass('fade-in');
+            }
+        });
+    });
+
     })(jQuery);

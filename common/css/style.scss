@@ -246,8 +246,6 @@ div{
 
 //--commitment--//
 .commitment{
-border-top: solid 2px #9c6836;
-border-bottom: solid 2px #9c6836;
 padding: 1rem;
 position:relative;
 margin-bottom:1.125rem;
@@ -269,6 +267,15 @@ display:none;
         display:none;
       }
   }
+}
+
+//scroll-fade-in
+.scroll-fading{
+  opacity: 0;
+  transition: all 2.0s;
+}
+.fade-in{
+  opacity: 1;
 }
 
 //footer//
