@@ -20,7 +20,8 @@ a{
 }
 //hdg//
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Serif JP', serif;
+  color:#333;
 }
 h1{
 	font-size: 3rem;
@@ -47,6 +48,7 @@ h6{
 //pタグ//
 p{
 margin-bottom:1rem;
+color:#333;
 }
 //マーカー//
 .marker-red {
@@ -67,7 +69,8 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
 //リンク//
 .link{
   position:relative;
-  margin-right:.8rem;
+  margin-right:2rem;
+  color:#333;
 &::after{
   content:"";
   position:absolute;
@@ -83,7 +86,7 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
 &:hover::after,
 &:focus::after,
 &:active::after{
-  margin-left:.3rem;
+  margin-left:.8rem;
 }
 }
 //アライン調整//
@@ -237,7 +240,7 @@ div{
     }
 }
 .contents{
-  padding: .8rem;
+  padding: 2rem;
   margin-bottom:2rem;
   border-radius: 8px;
   background: #fcfcfc;
@@ -293,18 +296,31 @@ display:none;
   background-size:cover;
   height:80vh;
   margin-bottom:2rem;
+  .main-hdg{
+    height: 100%;
+    text-align: center;
+    background-color: #0000004f;
+    & > h1{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+    }
+  }
 }
 .recomends{
-display:flex;
-justify-content:center;
+  display:flex;
+  justify-content:center;
+  padding-left:1rem;
+  padding-right:1rem;
+  .recomend{
+    border-radius: 2.5rem;
+    background: #fcfcfc;
+    box-shadow: inset 11px 11px 22px #dbdbdb, inset -11px -11px 22px #ffffff;
+    padding: 1.5rem;
+    margin:1.5rem;
+    .slider-img > img{
+      margin:0 auto;
+    }
 }
-.sentence{
-	text-align: center;
-	margin: 10px;
-	padding-top: 10px;
-}
-.sentence p{
-	font-size:14px;
-	font-weight: bold;
-	margin-top:5px;
 }

@@ -17,6 +17,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Noto Serif JP', serif;
+  color: #333;
 }
 
 h1 {
@@ -41,6 +42,7 @@ h3::before {
 
 p {
   margin-bottom: 1rem;
+  color: #333;
 }
 
 .marker-red {
@@ -65,7 +67,8 @@ p {
 
 .link {
   position: relative;
-  margin-right: .8rem;
+  margin-right: 2rem;
+  color: #333;
 }
 
 .link::after {
@@ -82,7 +85,7 @@ p {
 }
 
 .link:hover::after, .link:focus::after, .link:active::after {
-  margin-left: .3rem;
+  margin-left: .8rem;
 }
 
 .align-r {
@@ -256,7 +259,7 @@ p {
 }
 
 .contents {
-  padding: .8rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 8px;
   background: #fcfcfc;
@@ -313,19 +316,34 @@ p {
   margin-bottom: 2rem;
 }
 
+.main-vis .main-hdg {
+  height: 100%;
+  text-align: center;
+  background-color: #0000004f;
+}
+
+.main-vis .main-hdg > h1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
 .recomends {
   display: flex;
   justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.sentence {
-  text-align: center;
-  margin: 10px;
-  padding-top: 10px;
+.recomends .recomend {
+  border-radius: 2.5rem;
+  background: #fcfcfc;
+  box-shadow: inset 11px 11px 22px #dbdbdb, inset -11px -11px 22px #ffffff;
+  padding: 1.5rem;
+  margin: 1.5rem;
 }
 
-.sentence p {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 5px;
+.recomends .recomend .slider-img > img {
+  margin: 0 auto;
 }

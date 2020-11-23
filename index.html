@@ -9,6 +9,8 @@
 <link href="./common/css/font-awesome.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="./common/lib/slick/slick.css" rel="stylesheet">
+<link href="./common/lib/slick/slick-theme.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
@@ -48,7 +50,9 @@
           </div>
         
 <div class="main-vis">
-<h1>藤本商店</h1>
+  <div class="main-hdg">
+    <h1>藤本商店</h1>
+  </div>
 </div>
 
 <div class="main-content">
@@ -72,41 +76,33 @@
 
 <section class="contents">
 <h2>おすすめ</h2>
-<div class="recomends">
+<div class="recomends slider">
 <div class="recomend">
-<p><img src="./common/images/perikan.photo.jpg" alt="ペリカンパン"></p>
-<div class="sentence">
-<p>あの有名な<br>
-ペリカンパンが<br>
-当店にて<br>
-お買い上げ<br>
-いただけます。</p>
-</div>
+<a>
+<p class="slider-img"><img src="./common/images/perikan.photo.jpg" alt="ペリカンパン"></p>
+<p>1</p>
 </a>
 </div>
 
 <div class="recomend">
 <a href="#">
-<p><img src="./common/images/kaki.photo.jpg" alt="商品情報"></p>
-<div class="sentence">
-<p>店長こだわりの<br>
-食材を季節ごとに<br>
-取り揃えております。</p>
-</div>
+<p class="slider-img"><img src="./common/images/kaki.photo.jpg" alt="商品情報"></p>
+<p>2</p>
 </a>
 </div>
-
 
 <div class="recomend">
 <a href="#">
-<p><img src="./common/images/kaki.photo.jpg" alt="商品情報"></p>
-<div class="sentence">
-<p>ダミーダミー</p>
-<p>店長こだわりの<br>
-食材を季節ごとに<br>
-取り揃えております。</p>
-</div>
+<p class="slider-img"><img src="./common/images/kaki.photo.jpg" alt="商品情報"></p>
+<p>3</p>
 </a>
+</div>
+ 
+<div class="recomend">
+  <a href="#">
+  <p  class="slider-img"><img src="./common/images/kaki.photo.jpg" alt="商品情報"></p>
+  <p>4</p>
+  </a>
 </div>
 </div>
 </section>
@@ -120,6 +116,10 @@
 </footer>
 
 <script src="./common/js/common.js"></script>
+<script src="./common/lib/slick/slick.min.js"></script>
+<script src="./common/js/init.js"></script>
+<script>
 
+</script>
 </body>
 </html>
