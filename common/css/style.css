@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -98,6 +99,10 @@ p {
 
 .align-l {
   text-align: left !important;
+}
+
+header {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .header-inner {
@@ -300,6 +305,34 @@ p {
 
 .fade-in {
   opacity: 1;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs .tab {
+  padding: 1rem 2rem;
+  background-color: #999;
+  border-right: 1px solid #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.tabs .tab.active {
+  background-color: #40c700;
+}
+
+.tab-inner {
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 1rem;
+}
+
+.tab-inner.open {
+  display: block;
 }
 
 .footer-inner {

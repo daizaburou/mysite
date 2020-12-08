@@ -25,7 +25,7 @@ slideToggle();
         $('.first-view').css("display","none");
       }
       else{
-      $(window).on('load',function(){
+      $(document).ready(function(){
             setTimeout(fadeOut, 1000);
             sessionStorage.setItem('first-view', 'on');
         });
