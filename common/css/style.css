@@ -9,6 +9,12 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 
 ul, ol {
   list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+ul.list-bullet {
+  list-style-type: disc;
+  margin-left: 1.5rem;
 }
 
 a {
@@ -312,10 +318,10 @@ header {
 }
 
 .tabs .tab {
-  padding: 1rem 2rem;
+  padding: 0.375rem 2rem;
   background-color: #999;
   border-right: 1px solid #fff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
   color: #fff;
 }
@@ -333,6 +339,58 @@ header {
 
 .tab-inner.open {
   display: block;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+form input {
+  margin-bottom: 1rem;
+}
+
+form input[type="text"], form input[type="tel"] {
+  width: 20rem;
+  font-size: 1.125rem;
+  padding: 0.25rem;
+}
+
+form input[type="date"] {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+}
+
+form input[type="submit"] {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 2rem;
+  background-color: #ffffff;
+  border: 1px solid #ff8500;
+  border-radius: 0.25rem;
+  color: #333;
+  transition: .3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #ff8500;
+  color: #fff;
+}
+
+form .checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form .checkbox.col-2 label {
+  width: 50%;
+}
+
+.must:after {
+  content: "*";
+  color: #ea5325;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
 }
 
 .footer-inner {
