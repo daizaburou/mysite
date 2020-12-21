@@ -45,7 +45,7 @@ h3{
 h3::before{
 	content: "";
 	padding-right:.6rem;
-	border-left: 7px solid #79542c;
+  border-left: 7px solid $sub-color;
 }
 h4{
 }
@@ -336,14 +336,15 @@ input{
   display: block;
   font-size: 1.5rem;
   padding: 0.25rem 2rem;
-  background-color: #ffffff;
-  border: 1px solid #ff8500;
+  background-color:$main-color;
+  border: none;
   border-radius: 0.25rem;
-  color: #333;
-  transition:.3s;
+  color: #fff;
+  transition: .3s;
+  line-height: 1.4;
+  cursor: pointer;
   &:hover{
-    background-color:#ff8500;
-    color:#fff;
+    background-color:#000;
   }
 }
 }
@@ -366,11 +367,17 @@ input{
 
 
 //footer//
+footer{
+  margin-bottom: 1rem;
+}
 .footer-inner{
 	max-width: 1240px;
 	padding-left:1.125rem;
 	padding-right:1.125rem;
-	margin: 0 auto;
+  margin: 0 auto;
+  address{
+    text-shadow: 0px 2px 2px #00000054;
+  }
 }
 //end:common//
 
@@ -404,7 +411,33 @@ input{
     padding: 1.5rem;
     margin:1.5rem;
     .slider-img > img{
-      margin:0 auto;
+      width: 100%;
+      border-radius: 40px;
     }
 }
+}
+//=====- slick =======//
+.main-content{
+  .slick-dots{
+    li{
+      button{
+        &:before{
+          font-size: 40px;
+        }
+        &:hover:before{
+          color: $main-color;
+        }
+        &:focus:before{
+          color: $main-color;
+        }
+      }
+      &.slick-active{
+        button{
+          &:before{
+            color:$main-color;
+          }
+        }
+      }
+   }
+  }
 }

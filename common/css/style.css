@@ -44,7 +44,7 @@ h3 {
 h3::before {
   content: "";
   padding-right: .6rem;
-  border-left: 7px solid #79542c;
+  border-left: 7px solid #40c700;
 }
 
 p {
@@ -365,16 +365,17 @@ form input[type="submit"] {
   display: block;
   font-size: 1.5rem;
   padding: 0.25rem 2rem;
-  background-color: #ffffff;
-  border: 1px solid #ff8500;
+  background-color: #ff8500;
+  border: none;
   border-radius: 0.25rem;
-  color: #333;
+  color: #fff;
   transition: .3s;
+  line-height: 1.4;
+  cursor: pointer;
 }
 
 form input[type="submit"]:hover {
-  background-color: #ff8500;
-  color: #fff;
+  background-color: #000;
 }
 
 form .checkbox {
@@ -393,11 +394,19 @@ form .checkbox.col-2 label {
   margin-right: 0.2rem;
 }
 
+footer {
+  margin-bottom: 1rem;
+}
+
 .footer-inner {
   max-width: 1240px;
   padding-left: 1.125rem;
   padding-right: 1.125rem;
   margin: 0 auto;
+}
+
+.footer-inner address {
+  text-shadow: 0px 2px 2px #00000054;
 }
 
 .main-vis {
@@ -436,5 +445,22 @@ form .checkbox.col-2 label {
 }
 
 .recomends .recomend .slider-img > img {
-  margin: 0 auto;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.main-content .slick-dots li button:before {
+  font-size: 40px;
+}
+
+.main-content .slick-dots li button:hover:before {
+  color: #ff8500;
+}
+
+.main-content .slick-dots li button:focus:before {
+  color: #ff8500;
+}
+
+.main-content .slick-dots li.slick-active button:before {
+  color: #ff8500;
 }
