@@ -36,15 +36,17 @@ slideToggle();
 
 //スクロールフェイドイン
       $(window).on('scroll' , function(){
-        $('.scroll-fading').each(function(){
-            let elm = $(this);
-            let windowHeight = $(window).height();
-            let targetPosition = elm.offset().top - windowHeight;
-            if($(window).scrollTop() > targetPosition){
-            $(elm).addClass('fade-in');
-            }
-        });
-    });
+        let scrollNomal = $('.scroll-fading');
+        scrollNomal.each(fadeIn(scrollNomal));
+      });
+
+    const fadeIn = (elem) => {
+      let windowHeight = $(window).height();
+      let targetPosition = elem.offset().top - windowHeight;
+      if($(window).scrollTop() > targetPosition){
+      $(elem).addClass('fade-in');
+      }
+    }
 
 
     $(function() {

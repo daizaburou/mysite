@@ -107,6 +107,21 @@ p {
   text-align: left !important;
 }
 
+.commitment-content {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.commitment-content div:first-child {
+  margin-right: 1rem;
+}
+
+.commitment-content .text {
+  min-width: 50%;
+  background-color: #ccc;
+  padding: 1rem;
+}
+
 header {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }
@@ -306,11 +321,37 @@ header {
 
 .scroll-fading {
   opacity: 0;
-  transition: all 2.0s;
+  transition: opacity 2.0s, left 1.0s, right 1.0s, top 1.0s, bottom 1.0s, transform 1.0s;
+  position: relative;
 }
 
-.fade-in {
+.scroll-fading.-left {
+  left: -6rem;
+}
+
+.scroll-fading.-right {
+  right: -6rem;
+}
+
+.scroll-fading.-top {
+  top: -6rem;
+}
+
+.scroll-fading.-bottom {
+  bottom: -6rem;
+}
+
+.scroll-fading .-late {
+  transition: all 2.5s;
+}
+
+.scroll-fading.fade-in {
   opacity: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: none;
 }
 
 .tabs {
