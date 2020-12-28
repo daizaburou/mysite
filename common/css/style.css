@@ -77,7 +77,6 @@ p {
   margin-right: 2rem;
   color: #333;
 }
-
 .link::after {
   content: "";
   position: absolute;
@@ -90,7 +89,6 @@ p {
   margin-left: .3rem;
   transition: margin .3s;
 }
-
 .link:hover::after, .link:focus::after, .link:active::after {
   margin-left: .8rem;
 }
@@ -111,11 +109,9 @@ p {
   display: flex;
   margin-bottom: 3rem;
 }
-
 .commitment-content div:first-child {
   margin-right: 1rem;
 }
-
 .commitment-content .text {
   min-width: 50%;
   background-color: #ccc;
@@ -134,7 +130,6 @@ header {
   display: flex;
   justify-content: space-between;
 }
-
 .header-inner a {
   color: #333;
 }
@@ -149,22 +144,18 @@ header {
   display: flex;
   align-items: flex-end;
 }
-
 .global-nav ul li {
   display: inline-block;
   margin-top: .3rem;
   margin-right: 2.5rem;
 }
-
 .global-nav ul li:hover a:before {
   top: -20px;
   opacity: 1;
 }
-
 .global-nav ul li a {
   position: relative;
 }
-
 .global-nav ul li a:before {
   position: absolute;
   content: "";
@@ -185,19 +176,15 @@ header {
   justify-content: flex-end;
   font-size: 1.2rem;
 }
-
 .opening-hours p {
   margin-bottom: 0.8rem;
 }
-
 .opening-hours p span {
   margin-right: .4rem;
 }
-
 .opening-hours p:first-child span {
   color: #ff8500;
 }
-
 .opening-hours p:nth-child(2) span {
   color: #40c700;
 }
@@ -207,13 +194,11 @@ header {
   display: flex;
   align-items: center;
 }
-
 .reservations div {
   padding: .3rem;
   width: 5.5rem;
   position: relative;
 }
-
 .reservations div::after {
   content: "";
   background-color: #ffb52d8c;
@@ -228,21 +213,17 @@ header {
   z-index: -1;
   transition: opacity .6s;
 }
-
 .reservations div:hover::after {
   opacity: 1;
 }
-
 .reservations div:first-child {
   margin-right: 8px;
 }
-
 .reservations i {
   font-size: 2.25rem;
   display: block;
   padding-bottom: 0.25rem;
 }
-
 .reservations span {
   font-size: 0.875rem;
 }
@@ -265,7 +246,6 @@ header {
   transition: all 1s;
   display: block;
 }
-
 .first-view .content {
   position: absolute;
   top: 50%;
@@ -273,12 +253,10 @@ header {
   transform: translate(-50%, -50%);
   padding: 20px;
 }
-
 .first-view .content p {
   color: #000;
   font-size: 60px;
 }
-
 .first-view.-fade-out {
   opacity: 0;
   pointer-events: none;
@@ -306,7 +284,6 @@ header {
   margin-top: 1.25rem;
   margin-bottom: .625rem;
 }
-
 .toggle-btn .toggle-btn-inner {
   cursor: pointer;
   background-color: #ff8500;
@@ -314,37 +291,30 @@ header {
   padding: .5rem 1.25rem;
   color: #fff;
 }
-
 .toggle-btn .toggle-btn-inner .toggle-close {
   display: none;
 }
 
 .scroll-fading {
   opacity: 0;
-  transition: opacity 2.0s, left 1.0s, right 1.0s, top 1.0s, bottom 1.0s, transform 1.0s;
+  transition: opacity 2.0s, left 1.0s, top 1.0s, transform 1.0s;
   position: relative;
 }
-
 .scroll-fading.-left {
   left: -6rem;
 }
-
 .scroll-fading.-right {
-  right: -6rem;
+  left: 6rem;
 }
-
 .scroll-fading.-top {
   top: -6rem;
 }
-
 .scroll-fading.-bottom {
-  bottom: -6rem;
+  top: 6rem;
 }
-
 .scroll-fading .-late {
   transition: all 2.5s;
 }
-
 .scroll-fading.fade-in {
   opacity: 1;
   left: 0;
@@ -357,7 +327,6 @@ header {
 .tabs {
   display: flex;
 }
-
 .tabs .tab {
   padding: 0.375rem 2rem;
   background-color: #999;
@@ -366,7 +335,6 @@ header {
   cursor: pointer;
   color: #fff;
 }
-
 .tabs .tab.active {
   background-color: #40c700;
 }
@@ -377,7 +345,6 @@ header {
   border-radius: 2px;
   padding: 1rem;
 }
-
 .tab-inner.open {
   display: block;
 }
@@ -386,22 +353,18 @@ form label {
   display: block;
   margin-bottom: 0.25rem;
 }
-
 form input {
   margin-bottom: 1rem;
 }
-
 form input[type="text"], form input[type="tel"] {
   width: 20rem;
   font-size: 1.125rem;
   padding: 0.25rem;
 }
-
 form input[type="date"] {
   font-size: 1.5rem;
   padding: 0.25rem;
 }
-
 form input[type="submit"] {
   display: block;
   font-size: 1.5rem;
@@ -414,16 +377,13 @@ form input[type="submit"] {
   line-height: 1.4;
   cursor: pointer;
 }
-
 form input[type="submit"]:hover {
   background-color: #000;
 }
-
 form .checkbox {
   display: flex;
   flex-wrap: wrap;
 }
-
 form .checkbox.col-2 label {
   width: 50%;
 }
@@ -445,7 +405,6 @@ footer {
   padding-right: 1.125rem;
   margin: 0 auto;
 }
-
 .footer-inner address {
   text-shadow: 0px 2px 2px #00000054;
 }
@@ -456,13 +415,11 @@ footer {
   height: 80vh;
   margin-bottom: 2rem;
 }
-
 .main-vis .main-hdg {
   height: 100%;
   text-align: center;
   background-color: #0000004f;
 }
-
 .main-vis .main-hdg > h1 {
   position: relative;
   top: 50%;
@@ -476,7 +433,6 @@ footer {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 .recomends .recomend {
   border-radius: 2.5rem;
   background: #fcfcfc;
@@ -484,7 +440,6 @@ footer {
   padding: 1.5rem;
   margin: 1.5rem;
 }
-
 .recomends .recomend .slider-img > img {
   width: 100%;
   border-radius: 40px;
@@ -493,15 +448,12 @@ footer {
 .main-content .slick-dots li button:before {
   font-size: 40px;
 }
-
 .main-content .slick-dots li button:hover:before {
   color: #ff8500;
 }
-
 .main-content .slick-dots li button:focus:before {
   color: #ff8500;
 }
-
 .main-content .slick-dots li.slick-active button:before {
   color: #ff8500;
 }
