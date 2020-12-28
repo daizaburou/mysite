@@ -298,20 +298,20 @@ display:none;
 //scroll-fade-in
 .scroll-fading{
   opacity: 0;
-  transition: opacity 2.0s, left 1.0s, right 1.0s, top 1.0s, bottom 1.0s, transform 1.0s;
+  transition: opacity 2.0s, left 1.0s, top 1.0s, transform 1.0s;
   position:relative;
   //transform:rotateY(45deg);
   &.-left{
     left:-6rem;
   }
   &.-right{
-    right:-6rem;
+    left:6rem;
   }
   &.-top{
     top:-6rem;
   }
   &.-bottom{
-    bottom:-6rem;
+    top:6rem;
   } 
   .-late{
     transition: all 2.5s;
