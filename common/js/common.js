@@ -36,19 +36,16 @@ slideToggle();
 
 //スクロールフェイドイン
       $(window).on('scroll' , function(){
-        let scrollNomal = $('.scroll-fading');
-        scrollNomal.each(fadeIn(scrollNomal));
+        $('.scroll-fading').each(function(){
+          let windowHeight = $(window).height();
+          let targetPosition = $(this).offset().top - windowHeight;
+          if($(window).scrollTop() > targetPosition){
+          $(this).addClass('fade-in');
+          }
+        });
       });
 
-    const fadeIn = (elem) => {
-      let windowHeight = $(window).height();
-      let targetPosition = elem.offset().top - windowHeight;
-      if($(window).scrollTop() > targetPosition){
-      $(elem).addClass('fade-in');
-      }
-    }
-
-
+//タブ
     $(function() {
       let tabs = $(".tab");
       $(".tab").on("click", function() {
@@ -56,6 +53,19 @@ slideToggle();
         $(this).addClass("active");
         const index = tabs.index(this);
         $(".tab-inner").removeClass("open").eq(index).addClass("open");
-      })
-    })
+      });
+    });
+
+//スムーズスクロール
+$(function() {
+$('a[href^="#"]').click(function() {
+  let speed = 500; 
+  let href= $(this).attr("href");
+  let target = $(href == "#" || href == "" ? 'html' : href);
+  let position = target.offset().top;
+  $('body,html').animate({scrollTop:position}, speed, 'swing');
+});
+});
+
+
     })(jQuery);
