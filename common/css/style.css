@@ -199,6 +199,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   font-size: 1.2rem;
+  text-align: right;
 }
 
 .opening-hours p {
