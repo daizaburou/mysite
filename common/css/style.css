@@ -44,7 +44,7 @@ h3::before {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #333;
 }
 
@@ -130,6 +130,7 @@ ul.list-bullet {
 
 .flex-container {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 header {
@@ -322,6 +323,10 @@ header {
   left: 6rem;
 }
 
+.scroll-fading.-right {
+  left: -6rem;
+}
+
 .scroll-fading.-top {
   top: -6rem;
 }
@@ -510,14 +515,32 @@ footer {
   padding-top: 1rem;
 }
 
-.commitment-hdg {
+.commitment-hdg h1 {
   position: relative;
   top: 2rem;
 }
 
+.commitment-hdg h3 {
+  position: relative;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.commitment-hdg h3:before {
+  margin-bottom: -.5rem;
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background-color: #ff8500;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+}
+
 .commitment-contents {
   padding: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   border-radius: 8px;
   background: #fcfcfc;
   box-shadow: 11px 11px 22px 5px #a7a7a7;
@@ -535,7 +558,11 @@ footer {
   top: -10rem;
 }
 
-#commitment-box-01 {
+.commitment-wrap .flex-container {
+  margin-bottom: 5rem;
+}
+
+.commitment-wrap .flex-container .commitment-box {
   width: 60%;
   padding: 3rem;
   position: relative;
@@ -544,7 +571,7 @@ footer {
   box-shadow: 11px 11px 22px 5px #a7a7a7;
 }
 
-#commitment-box-01 p {
+.commitment-wrap .flex-container .commitment-box p {
   top: 50%;
   transform: transLateY(-50%);
 }
@@ -553,6 +580,7 @@ footer {
   font-size: 1.2rem;
   position: relative;
   margin-bottom: .75rem;
+  font-family: 'Noto Serif JP', serif;
 }
 
 .point-list dt a {

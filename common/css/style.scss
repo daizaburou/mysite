@@ -51,7 +51,7 @@ h5{
 h6{
 }
 p{
-margin-bottom:1rem;
+margin-bottom:2rem;
 color:#333;
 }
 //======================//
@@ -131,8 +131,10 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
   background: #fcfcfc;
   box-shadow: 11px 11px 22px #dbdbdb, -11px -11px 22px #ffffff;
 }
+//flex//
 .flex-container{
   display:flex;
+  margin-bottom:2rem
 }
 //======================//
 //======= header =======//
@@ -301,6 +303,9 @@ div{
   position: relative;
   &.-left {
     left:6rem;
+  }
+  &.-right{
+    left:-6rem;
   }
   &.-top{
     top: -6rem;
@@ -493,12 +498,30 @@ footer{
   }
 }
 .commitment-hdg{
-position:relative;
-top:2rem;
+  h1{
+    position:relative;
+    top:2rem;
+  }
+  h3{
+    position:relative;
+    margin-bottom:3rem;
+    font-size:2rem;
+    &:before{
+      margin-bottom: -.5rem;
+      position: absolute;
+      width: 10%;
+      height: 3px;
+      background-color: $main-color;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border:none;
+    }
+  }
 }
 .commitment-contents{
   padding: 3rem;
-  margin-bottom:2rem;
+  margin-bottom:4rem;
   border-radius: 8px;
   background: #fcfcfc;
   box-shadow: 11px 11px 22px 5px #a7a7a7;
@@ -512,24 +535,28 @@ top:2rem;
 .commitment-wrap{
   position:relative;
   top:-10rem;
-}
-#commitment-box-01{
-  width: 60%;
-  padding: 3rem;
-  position: relative;
-  top: 2rem;
-  background-color: #fcfcfc;
-  box-shadow: 11px 11px 22px 5px #a7a7a7;
-  p{
-    top: 50%;
-    transform: transLateY(-50%);
+  .flex-container{
+    margin-bottom:5rem;
+    .commitment-box{
+      width: 60%;
+      padding: 3rem;
+      position: relative;
+      top: 2rem;
+      background-color: #fcfcfc;
+      box-shadow: 11px 11px 22px 5px #a7a7a7;
+      p{
+        top: 50%;
+        transform: transLateY(-50%);
+      }
+    }
   }
 }
- .point-list{
+.point-list{
    dt{
      font-size: 1.2rem;
      position: relative;
      margin-bottom: .75rem;
+     font-family: 'Noto Serif JP', serif;
      a{
        padding: .5rem;
        background: linear-gradient(90deg, rgba(208, 147, 82, 0.6), rgba(192, 134, 70, 0.6) 60%, rgba(208, 147, 82, 0.6)), repeating-radial-gradient(ellipse at 60% 150%, #c08646, #c08646 0.2%, #d09352 0.6%, #d09352 1%);
