@@ -1,5 +1,6 @@
 (function($){
 const headerHeight = $('header').height();
+$('main').css({'padding-top':headerHeight + 'px'});
 //スライドトグル
 const slideToggle = function(){
 $('.toggle-btn-inner').each(function(){

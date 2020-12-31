@@ -48,6 +48,10 @@ p {
   color: #333;
 }
 
+main {
+  padding-top: 6rem;
+}
+
 ul.list-bullet {
   list-style-type: disc;
   margin-left: 1.5rem;
@@ -134,7 +138,7 @@ ul.list-bullet {
 }
 
 header {
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 100;
   background-color: #fff;
@@ -516,8 +520,6 @@ footer {
 .commitment-main .commitment-top {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
-  padding-left: 1rem;
-  padding-top: 1rem;
 }
 
 .commitment-hdg h1 {
