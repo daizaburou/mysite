@@ -141,6 +141,10 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
 //======================//
 header{
 box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+position: fixed;
+z-index: 100;
+background-color: #fff;
+width: 100%;
 }
 .header-inner{
 	max-width: 1240px;
