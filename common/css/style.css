@@ -114,7 +114,7 @@ ul.list-bullet {
 }
 
 .main-content {
-  width: 1240px;
+  max-width: 1240px;
   padding-right: 1.25rem;
   padding-left: 1.25rem;
   margin: 0 auto;
@@ -152,6 +152,44 @@ header {
 
 .header-inner a {
   color: #333;
+}
+
+@media (max-width: 767px) {
+  .header-inner {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    transition: all .5s;
+    opacity: 0;
+    left: 100%;
+    background-color: #fff;
+    flex-direction: column;
+  }
+  .header-inner .logo {
+    text-align: center;
+    margin-top: .5rem;
+  }
+  .header-inner .global-nav {
+    order: 3;
+  }
+  .header-inner .global-nav nav {
+    width: 100%;
+  }
+  .header-inner .global-nav nav ul li {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .header-inner .opening-hours {
+    order: 2;
+  }
+  .header-inner .reservations {
+    order: 1;
+  }
+  .header-inner.active {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
 }
 
 .logo img {
@@ -395,6 +433,63 @@ header {
 
 .main-content .slick-dots li.slick-active button:before {
   color: #ff8500;
+}
+
+.btn-hamb {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 50px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.btn-hamb span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.btn-hamb, .btn-hamb span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .btn-hamb, .btn-hamb span {
+    display: none;
+  }
+}
+
+.btn-hamb span:nth-of-type(1) {
+  top: 0;
+}
+
+.btn-hamb span:nth-of-type(2) {
+  top: 20px;
+}
+
+.btn-hamb span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.btn-hamb.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.btn-hamb.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.btn-hamb.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
 }
 
 form label {

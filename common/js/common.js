@@ -68,5 +68,13 @@ $('a[href^="#"]').click(function() {
 });
 });
 
+//ハンバーガー
+$(function(){
+  $('.btn-hamb').on('click', function() {
+    $(this).toggleClass('active');
+    $(".header-inner").toggleClass('active');
+    return false;
+  });
+});
 
     })(jQuery);
