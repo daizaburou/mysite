@@ -4,16 +4,17 @@
 $main-color:#ff8500;
 $sub-color:#40c700;
 $pc: 1200px;
-$sp: 767px;
+$max-sp: 767px;
+$min-sp: 768px;
 
 @mixin pc {
-    @media (max-width: ($pc)) {
+    @media (min-width: ($min-sp)) {
       @content;
     }
   }
 
   @mixin sp {
-    @media (max-width: ($sp)) {
+    @media (max-width: ($max-sp)) {
       @content;
     }
   }
@@ -177,11 +178,11 @@ width: 100%;
     height:100vh;
     transition:all .5s;
     opacity:0;
-    left:100%;
+    top:-100%;
     background-color:#fff;
     flex-direction:column;
+    justify-content:flex-start;
     .logo{
-      text-align:center;
       margin-top:.5rem;
     }
     .global-nav{
@@ -192,6 +193,7 @@ width: 100%;
           width:100%;
           text-align:center;
           font-size:2rem;
+          margin-bottom:.5rem;
         }
       }
     }
@@ -200,10 +202,19 @@ width: 100%;
     }
     .reservations{
       order:1;
+      div{
+        width:7rem;
+        span{
+          font-size:1.2rem;
+        }
+      }
     }
     &.active{
-      transform:translateX(-100%);
+      transform:translateY(100%);
       opacity:1;
+      .global-nav ul li a:before{
+        width: 100%;
+      }
     }
   }
 }
@@ -221,10 +232,12 @@ ul{
     display:inline-block;
     margin-top: .3rem;
     margin-right: 2.5rem;
-    &:hover a:before {
-      top: -20px;
-      opacity: 1;
+    @include pc {
+      &:hover a:before {
+        top: -20px;
+        opacity: 1;
       }
+    }
     a{
       position:relative;
       &:before {
@@ -239,6 +252,13 @@ ul{
         border-radius: 50%;
         opacity: 0;
         transition: opacity .3s cubic-bezier(0.81, 0.01, 0.32, 0.99),top .3s ease;
+        @include sp {
+          top: 40px;
+          opacity: 1;
+          /* width: 100%; */
+          margin-bottom: 1rem;
+          margin-top: .25rem;
+          transition: width 1.5s;        }
         }
       }
   }
@@ -260,6 +280,13 @@ p{
   }
   &:nth-child(2) span{
     color:$sub-color;
+  }
+}
+@include sp {
+  font-size:1.5rem;
+  text-align:center;
+  p span{
+    font-size:1.5em;
   }
 }
 }
@@ -299,6 +326,9 @@ div{
     }
     span{
       font-size:0.875rem;
+    }
+    @include sp {
+      justify-content:center;
     }
 }
 //======================//
@@ -592,7 +622,8 @@ footer{
   background-image: url(../images/commitment_main.jpg);
   background-repeat:no-repeat;
   background-attachment:fixed;
-  background-size:contain;
+  background-size:cover;
+  background-position:center;
   .commitment-top{
     background-color:rgba(0, 0, 0, 0.5);
     height: 100%;

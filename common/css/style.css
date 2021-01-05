@@ -161,12 +161,12 @@ header {
     height: 100vh;
     transition: all .5s;
     opacity: 0;
-    left: 100%;
+    top: -100%;
     background-color: #fff;
     flex-direction: column;
+    justify-content: flex-start;
   }
   .header-inner .logo {
-    text-align: center;
     margin-top: .5rem;
   }
   .header-inner .global-nav {
@@ -179,6 +179,7 @@ header {
     width: 100%;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: .5rem;
   }
   .header-inner .opening-hours {
     order: 2;
@@ -186,9 +187,18 @@ header {
   .header-inner .reservations {
     order: 1;
   }
+  .header-inner .reservations div {
+    width: 7rem;
+  }
+  .header-inner .reservations div span {
+    font-size: 1.2rem;
+  }
   .header-inner.active {
-    transform: translateX(-100%);
+    transform: translateY(100%);
     opacity: 1;
+  }
+  .header-inner.active .global-nav ul li a:before {
+    width: 100%;
   }
 }
 
@@ -213,9 +223,11 @@ header {
   margin-right: 2.5rem;
 }
 
-.global-nav ul li:hover a:before {
-  top: -20px;
-  opacity: 1;
+@media (min-width: 768px) {
+  .global-nav ul li:hover a:before {
+    top: -20px;
+    opacity: 1;
+  }
 }
 
 .global-nav ul li a {
@@ -234,6 +246,17 @@ header {
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s cubic-bezier(0.81, 0.01, 0.32, 0.99), top 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .global-nav ul li a:before {
+    top: 40px;
+    opacity: 1;
+    /* width: 100%; */
+    margin-bottom: 1rem;
+    margin-top: .25rem;
+    transition: width 1.5s;
+  }
 }
 
 .opening-hours {
@@ -258,6 +281,16 @@ header {
 
 .opening-hours p:nth-child(2) span {
   color: #40c700;
+}
+
+@media (max-width: 767px) {
+  .opening-hours {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .opening-hours p span {
+    font-size: 1.5em;
+  }
 }
 
 .reservations {
@@ -303,6 +336,12 @@ header {
 
 .reservations span {
   font-size: 0.875rem;
+}
+
+@media (max-width: 767px) {
+  .reservations {
+    justify-content: center;
+  }
 }
 
 .first-view {
@@ -605,7 +644,8 @@ footer {
   background-image: url(../images/commitment_main.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 .commitment-main .commitment-top {
