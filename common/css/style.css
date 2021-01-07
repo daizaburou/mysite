@@ -48,6 +48,10 @@ p {
   color: #333;
 }
 
+img {
+  width: 100%;
+}
+
 ul.list-bullet {
   list-style-type: disc;
   margin-left: 1.5rem;
@@ -352,7 +356,7 @@ header {
   background-color: #fff;
   height: 100vh;
   width: 100vw;
-  z-index: 50;
+  z-index: 500;
   opacity: 1;
   transition: all 1s;
   display: block;
