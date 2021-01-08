@@ -409,9 +409,15 @@ div{
   position: relative;
   &.-left {
     left:6rem;
+    @include max-tl{
+      left:0;
+    }
   }
   &.-right{
     left:-6rem;
+    @include max-tl{
+      left:0;
+    }
   }
   &.-top{
     top: -6rem;
@@ -645,6 +651,11 @@ footer{
   background-attachment:fixed;
   background-size:cover;
   background-position:center;
+  @include max-tl{
+    height:30vh;
+    background-image: url(../images/commitment_main_sp.jpg);
+    background-attachment:inherit;
+  }
   .commitment-top{
     background-color:rgba(0, 0, 0, 0.5);
     height: 100%;
@@ -654,6 +665,9 @@ footer{
   h1{
     position:relative;
     top:2rem;
+    @include max-tl{
+      top:0;
+    }
   }
   h3{
     position:relative;
@@ -683,13 +697,24 @@ footer{
     top: -10rem;
     left: 20rem;
     width:80%;
+    @include max-tl{
+      top: 0;
+      left: 0;
+      width:100%;
+    }
   }
 }
 .commitment-wrap{
   position:relative;
   top:-10rem;
+  @include max-tl{
+    top: 0;
+  }
   .flex-container{
     margin-bottom:5rem;
+    @include max-tl{
+      display:block;
+    }
     .commitment-box{
       width: 60%;
       padding: 3rem;
@@ -697,9 +722,18 @@ footer{
       top: 2rem;
       background-color: #fcfcfc;
       box-shadow: 11px 11px 22px 5px #a7a7a7;
+      @include max-tl{
+        top:0;
+        width:100%;
+        margin-bottom:2rem;
+      }
       p{
         top: 50%;
         transform: transLateY(-50%);
+        @include max-tl{
+          top:0;
+          transform:none;
+        }
       }
     }
   }

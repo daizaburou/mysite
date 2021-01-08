@@ -411,8 +411,20 @@ header {
   left: 6rem;
 }
 
+@media (max-width: 940px) {
+  .scroll-fading.-left {
+    left: 0;
+  }
+}
+
 .scroll-fading.-right {
   left: -6rem;
+}
+
+@media (max-width: 940px) {
+  .scroll-fading.-right {
+    left: 0;
+  }
 }
 
 .scroll-fading.-top {
@@ -654,6 +666,14 @@ footer {
   background-position: center;
 }
 
+@media (max-width: 940px) {
+  .commitment-main {
+    height: 30vh;
+    background-image: url(../images/commitment_main_sp.jpg);
+    background-attachment: inherit;
+  }
+}
+
 .commitment-main .commitment-top {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -662,6 +682,12 @@ footer {
 .commitment-hdg h1 {
   position: relative;
   top: 2rem;
+}
+
+@media (max-width: 940px) {
+  .commitment-hdg h1 {
+    top: 0;
+  }
 }
 
 .commitment-hdg h3 {
@@ -697,13 +723,33 @@ footer {
   width: 80%;
 }
 
+@media (max-width: 940px) {
+  .commitment-contents.-unique01 {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
 .commitment-wrap {
   position: relative;
   top: -10rem;
 }
 
+@media (max-width: 940px) {
+  .commitment-wrap {
+    top: 0;
+  }
+}
+
 .commitment-wrap .flex-container {
   margin-bottom: 5rem;
+}
+
+@media (max-width: 940px) {
+  .commitment-wrap .flex-container {
+    display: block;
+  }
 }
 
 .commitment-wrap .flex-container .commitment-box {
@@ -715,9 +761,24 @@ footer {
   box-shadow: 11px 11px 22px 5px #a7a7a7;
 }
 
+@media (max-width: 940px) {
+  .commitment-wrap .flex-container .commitment-box {
+    top: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
 .commitment-wrap .flex-container .commitment-box p {
   top: 50%;
   transform: transLateY(-50%);
+}
+
+@media (max-width: 940px) {
+  .commitment-wrap .flex-container .commitment-box p {
+    top: 0;
+    transform: none;
+  }
 }
 
 .point-list dt {
