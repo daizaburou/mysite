@@ -408,22 +408,16 @@ div{
   transition: opacity 2.5s, left 1.5s, top 1.5s, transform 1.5s;
   position: relative;
   &.-left {
-    left:6rem;
-    @include max-tl{
-      left:0;
-    }
+    left:3rem;
   }
   &.-right{
-    left:-6rem;
-    @include max-tl{
-      left:0;
-    }
+    left:-3rem;
   }
   &.-top{
-    top: -6rem;
+    top: -3rem;
   }
   &.-bottom{
-    top:6rem;
+    top:3rem;
   } 
   .-late{
     transition: all 3s;
@@ -565,6 +559,8 @@ input{
   transition: .3s;
   line-height: 1.4;
   cursor: pointer;
+  -webkit-appearance: button;
+  appearance: button;
   &:hover{
     background-color:#000;
   }
@@ -704,7 +700,7 @@ footer{
     position: relative;
     top: -10rem;
     left: 20rem;
-    width:80%;
+    width:65%;
     @include max-tl{
       top: 0;
       left: 0;

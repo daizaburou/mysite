@@ -408,31 +408,19 @@ header {
 }
 
 .scroll-fading.-left {
-  left: 6rem;
-}
-
-@media (max-width: 940px) {
-  .scroll-fading.-left {
-    left: 0;
-  }
+  left: 3rem;
 }
 
 .scroll-fading.-right {
-  left: -6rem;
-}
-
-@media (max-width: 940px) {
-  .scroll-fading.-right {
-    left: 0;
-  }
+  left: -3rem;
 }
 
 .scroll-fading.-top {
-  top: -6rem;
+  top: -3rem;
 }
 
 .scroll-fading.-bottom {
-  top: 6rem;
+  top: 3rem;
 }
 
 .scroll-fading .-late {
@@ -581,6 +569,8 @@ form input[type="submit"] {
   transition: .3s;
   line-height: 1.4;
   cursor: pointer;
+  -webkit-appearance: button;
+  appearance: button;
 }
 
 form input[type="submit"]:hover {
@@ -732,7 +722,7 @@ footer {
   position: relative;
   top: -10rem;
   left: 20rem;
-  width: 80%;
+  width: 65%;
 }
 
 @media (max-width: 940px) {
