@@ -274,7 +274,7 @@ header {
 }
 
 .opening-hours p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .opening-hours p span {
@@ -559,7 +559,8 @@ form input {
 }
 
 form input[type="text"], form input[type="tel"] {
-  width: 20rem;
+  max-width: 20rem;
+  width: 100%;
   font-size: 1.125rem;
   padding: 0.25rem;
 }
@@ -586,6 +587,11 @@ form input[type="submit"]:hover {
   background-color: #000;
 }
 
+form textarea {
+  max-width: 35rem;
+  width: 100%;
+}
+
 form .checkbox {
   display: flex;
   flex-wrap: wrap;
@@ -593,6 +599,12 @@ form .checkbox {
 
 form .checkbox.col-2 label {
   width: 50%;
+}
+
+@media (max-width: 767px) {
+  form .checkbox.col-2 label {
+    width: 100%;
+  }
 }
 
 .must:after {

@@ -1,6 +1,15 @@
 (function($){
 const headerHeight = $('header').height();
-$('main').css({'padding-top':headerHeight + 'px'});
+const mediaSp = matchMedia('(max-width: 940px)').matches;
+
+$(document).ready(function() {
+  if(mediaSp){
+     return false;
+  }
+  $('main').css({'padding-top':headerHeight + 'px'});
+});
+
+
 //スライドトグル
 const slideToggle = function(){
 $('.toggle-btn-inner').each(function(){

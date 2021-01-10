@@ -292,7 +292,7 @@ justify-content:flex-end;
 font-size: 1.2rem;
 text-align:right;
 p{
-  margin-bottom:0.8rem;
+  margin-bottom:0.5rem;
   span{
     margin-right:.4rem;
   }
@@ -545,7 +545,8 @@ label{
 input{
   margin-bottom:1rem;
 &[type="text"],&[type="tel"]{
-  width: 20rem;
+  max-width: 20rem;
+  width:100%;
   font-size: 1.125rem;
   padding: 0.25rem;
 }
@@ -569,12 +570,19 @@ input{
   }
 }
 }
+textarea{
+  max-width:35rem;
+  width:100%;
+}
 .checkbox{
   display:flex;
   flex-wrap:wrap;
   &.col-2{
     label{
       width:50%;
+      @include sp{
+        width:100%;
+      }
     }
   }
 }
