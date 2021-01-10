@@ -165,7 +165,7 @@ header {
     height: 100vh;
     transition: all .5s;
     opacity: 0;
-    top: -100%;
+    left: 100%;
     background-color: #fff;
     flex-direction: column;
     justify-content: flex-start;
@@ -198,7 +198,7 @@ header {
     font-size: 1.2rem;
   }
   .header-inner.active {
-    transform: translateY(100%);
+    transform: translateX(-100%);
     opacity: 1;
   }
 }
