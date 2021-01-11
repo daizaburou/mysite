@@ -499,18 +499,6 @@ header {
   border-radius: 4px;
 }
 
-.btn-hamb, .btn-hamb span {
-  display: inline-block;
-  transition: all .5s;
-  box-sizing: border-box;
-}
-
-@media (min-width: 941px) {
-  .btn-hamb, .btn-hamb span {
-    display: none;
-  }
-}
-
 .btn-hamb span:nth-of-type(1) {
   top: 0;
 }
@@ -524,7 +512,6 @@ header {
 }
 
 .btn-hamb.active span:nth-of-type(1) {
-  -webkit-transform: translateY(20px) rotate(-45deg);
   transform: translateY(20px) rotate(-45deg);
 }
 
@@ -535,6 +522,96 @@ header {
 .btn-hamb.active span:nth-of-type(3) {
   -webkit-transform: translateY(-20px) rotate(45deg);
   transform: translateY(-20px) rotate(45deg);
+}
+
+.btn-hamb, .btn-hamb span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+
+@media (min-width: 941px) {
+  .btn-hamb, .btn-hamb span {
+    display: none;
+  }
+}
+
+.parallax-cont {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.parallax-cont .content {
+  width: 100%;
+  max-width: 1240px;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  position: absolute;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.parallax-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateY(0px);
+  transition: all .2s;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.parallax-inner.parallax01 {
+  background-image: url(../images/parallax_01.png);
+  z-index: 1;
+}
+
+.parallax-inner.parallax02 {
+  background-image: url(../images/parallax_02.png);
+  z-index: 1;
+}
+
+.parallax-inner.parallax03 {
+  background-image: url(../images/parallax_03.png);
+  z-index: 2;
+}
+
+.parallax-inner.parallax04 {
+  background-image: url(../images/parallax_04.png);
+  z-index: 4;
+}
+
+.parallax-inner.parallax05 {
+  background-image: url(../images/parallax_05.png);
+  z-index: 5;
+}
+
+.parallax-inner.parallax06 {
+  background-image: url(../images/parallax_06.png);
+  z-index: 6;
+}
+
+.parallax-inner.parallax07 {
+  background-image: url(../images/parallax_07.png);
+  z-index: 7;
+}
+
+.parallax-inner.parallax08 {
+  background-image: url(../images/parallax_08.png);
+  z-index: 8;
+}
+
+.parallax-inner.parallax09 {
+  background-image: url(../images/parallax_09.png);
+  z-index: 9;
+}
+
+.parallax-inner.parallax10 {
+  background-image: url(../images/parallax_10.png);
+  z-index: 10;
 }
 
 form label {

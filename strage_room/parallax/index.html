@@ -2,84 +2,86 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ここにタイトル</title>
-<link href="css/css.css" rel="stylesheet" type="text/css">
+<title>藤本商店</title>
+<meta name="keywords" content="ペリカンパン,ぬか漬け,惣菜,新鮮野菜,手作り,こだわり,上野,御徒町">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="../../common/images/favicon.png">
+<link rel="stylesheet" href="../../common/css/style.css">
+<link href="../../common/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="../../common/lib/slick/slick.css" rel="stylesheet">
+<link href="../../common/lib/slick/slick-theme.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
-<style type="text/css">
-</style>
+
 <body>
 <header>
-    <h1>サイト内におけるタイトル</h1>
-</header>
-<style>
-.parara-cont{
-  width:661px;
-  height:448px;
-  background-image: url(images/parara.png);
-  position: relative;
-}
-.parara-inner{
-  width:100%;
-  height:100%;
-  position: absolute;
-  transform:translateY(0px);
-  transition:all .8s;
-}
-.parara-inner.parara02{
-  background-image: url(images/parara_02.png);
-  z-index: 1;
-}
-.parara-inner.parara03{
-  background-image: url(images/parara_03.png);
-  z-index: 2;
-}
-.parara-inner.parara04{
-  background-image: url(images/parara_04.png);
-  z-index: 3;
-}
-</style>
-<div class="parara-cont">
-<div class="parara-inner parara02" data-js-speed="10"></div>
-<div class="parara-inner parara03" data-js-speed="20"></div>
-<div class="parara-inner parara04" data-js-speed="30"></div>
-</div>
-
-<script>
-  (function(){
-    $(window).on('scroll' , function(){
-      let target = $(".parara-inner");
-      let windowHeight = $(window).height();
-      let scrollPosition = $(window).scrollTop();
-      target.each(function(){
-        let speed = $(this).data('js-speed');
-        let scrollSpeed = speed * scrollPosition / 10;
-        $(this).css({ 'transform' : 'translateY(-' + scrollSpeed + 'px)' } );
-      });
-      });
-  })();
-</script>
-
+<div class="header-inner">
+<div class="logo"><a href="../../"><img src="../../common/images/logo.png" alt="藤本商店"></a></div>
+<div class="global-nav">
 <nav>
-  <ul>
-    <li><a href="#">ナビ1</a></li>
-    <li><a href="#">ナビ2</a></li>
-    <li><a href="#">ナビ3</a></li>
-    <li><a href="#">ナビ4</a></li>
-  </ul>
+<ul>
+<li><a href="../../commitment/">こだわり</a></li>
+<li><a href="../../news/">ニュース</a></li>
+<li><a href="../../blog/">ブログ</a></li>
+<li><a href="../../store/">商品</a></li>
+</ul>
 </nav>
-<section>
-<article>
-  <span class="date">ここに日付</span>
-  <h2>ここにタイトル</h2>
-  <p>
-   ここにテキスト
-  </p>
-  <a href="#" class="btn">&gt;もっと見る</a>
-</article>
-</section>
+</div>
+<div class="opening-hours">
+<p><span>open</span>10:00 ~ 19:00</p>
+<p><span>saturday</span>10:00 ~ 14:00</p>
+</div>
+<div class="reservations">
+<div><a href="../../about/"><i class="fas fa-map-marker-alt"></i><span>店舗情報<span></a></div>
+<div><a href="../../reservation/"><i class="fas fa-truck"></i><span>予約・配達</span></a></div>
+</div>
+</div>
+<div class="btn-hamb">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
+
+<main>
+  <div class="parallax-cont">
+    <div class="content">
+      <h1>ランディングページ</h1>
+      <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+      <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+      <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+      <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+      <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+
+    </div>  
+    <div class="parallax-inner parallax01" data-js-speed="10"></div>
+    <div class="parallax-inner parallax02" data-js-speed="20"></div>
+    <div class="parallax-inner parallax03" data-js-speed="30"></div>
+    <div class="parallax-inner parallax04" data-js-speed="40"></div>
+    <div class="parallax-inner parallax05" data-js-speed="50"></div>
+    <div class="parallax-inner parallax06" data-js-speed="60"></div>
+    <div class="parallax-inner parallax07" data-js-speed="70"></div>
+    <div class="parallax-inner parallax08" data-js-speed="80"></div>
+    <div class="parallax-inner parallax09" data-js-speed="90"></div>
+    <div class="parallax-inner parallax10" data-js-speed="100"></div>
+  </div>
+
+  <div class="main-content">
+    <h1>ランディングページ</h1>
+  </div> 
+</main>
+
 <footer>
-<address>Copyright(C)ここに年 個人名or会社名,Allright Reserved.</address>
+<div class="footer-inner">
+<address>Copyright(C)2020 藤本商店,Allright Reserved.</address>
+</div>
 </footer>
+
+<script src="../../common/js/common.js"></script>
+<script src="../../common/lib/slick/slick.min.js"></script>
+<script src="../../common/js/init.js"></script>
+
 </body>
 </html>
