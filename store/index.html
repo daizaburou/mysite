@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>藤本商店</title>
+<meta name="keywords" content="ペリカンパン,ぬか漬け,惣菜,新鮮野菜,手作り,こだわり,上野,御徒町">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="../common/images/favicon.png">
+<link rel="stylesheet" href="../common/css/style.css">
+<link href="../common/css/font-awesome.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="../common/lib/slick/slick.css" rel="stylesheet">
+<link href="../common/lib/slick/slick-theme.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.3/muuri.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+
+<body>
+<header>
+<div class="header-inner">
+<div class="logo"><a href="../"><img src="../common/images/logo.png" alt="藤本商店"></a></div>
+<div class="global-nav">
+<nav>
+<ul>
+<li><a href="../commitment/">こだわり</a></li>
+<li><a href="../news/">ニュース</a></li>
+<li><a href="../blog/">ブログ</a></li>
+<li><a href="../store/">商品</a></li>
+</ul>
+</nav>
+</div>
+<div class="opening-hours">
+<p><span>open</span>10:00 ~ 19:00</p>
+<p><span>saturday</span>10:00 ~ 14:00</p>
+</div>
+<div class="reservations">
+<div><a href="../about/"><i class="fas fa-map-marker-alt"></i><span>店舗情報<span></a></div>
+<div><a href="../reservation/"><i class="fas fa-truck"></i><span>予約・配達</span></a></div>
+</div>
+</div>
+<div class="btn-hamb">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
+<style>
+</style>
+<main>
+  
+  <div class="main-content">
+    <h1>商品情報</h1>
+      <div>
+        <select class="type-filter" name="type">
+          <option value="">商品を絞り込む</option>
+          <option value="fruits">フルーツ</option>
+          <option value="vege">野菜</option>
+          <option value="meat_fish">肉・魚</option>
+          <option value="natural">自然食品</option>
+          <option value="pellican">ペリカンパン</option>
+        </select>
+      </div>
+
+      <div class="grid">
+        <div class="item" data-type="vege">
+          <div class="item-content">
+            <img src="../common/images/store_01.jpg" alt="">
+            <p><em>和歌山県産 優糖星</em><br>
+              ミニフルーツトマトみたいな感じです！<span class="marker-yellow">味が濃くて、甘くて、めちゃくちゃおいしいです</span></p>
+
+          </div>
+        </div>
+       
+        <div class="item" data-type="meat_fish">
+          <div class="item-content">
+            <img src="../common/images/store_03.jpg" alt="">
+            <p><em>黒毛和牛サーロインステーキ</em><br>
+            <span class="marker-yellow">さしがきれいで、お肉の旨味を存分に楽しめます!</span>どんな調理方法でもお肉自体の素材が良いとなんでも美味しくお召し上がりいただけます</p>
+          </div>
+        </div>
+       
+        <div class="item" data-type="natural">
+          <div class="item-content">
+            <img src="../common/images/store_04.jpg" alt="">
+            <ul class="list-bullet">
+              <li>千鳥酢 京都三条</li>
+              <li>有機ウスターソース</li>
+              <li>有機中濃ソース</li>
+              <li>有機濃厚ソース</li>
+              <li>ごまドレッシング</li>
+              <li>かけぽん</li>
+              <li>めんつゆ</li>
+              <li>松田のマヨネーズ</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="item" data-type="fruits">
+          <div class="item-content">
+            <img src="../common/images/store_05.jpg" alt="">
+            <p><em>愛媛県産の紅まどんな</em><br>
+            紅まどんなの大きな特徴は、<span class="marker-yellow">ゼリーのような舌触りの果肉です。</span> 種が無く、ジョウノウも気にならないほど薄いのでとても食べやすくジューシーな味わいです価格も高めで高級フルーツの一種と言えます！</p>
+          </div>
+        </div>
+  
+        <div class="item" data-type="fruits">
+          <div class="item-content">
+            <img src="../common/images/store_06.jpg" alt="">
+            <p><em>和歌山県 寅楠の木熟早生みかん5kg</em></p>
+              <ul class="list-bullet">
+                <li>小サイズ…1500円</li>
+                <li>SSサイズ…1700円</li>
+                <li>Sサイズ…2500円</li>
+                <li>Mサイズ…2500円</li>
+              </ul>
+            <p>※箱売りでの値段です<br>
+            このみかんコスパめちゃくちゃいいです！甘味もしっかりあって、後味も非常にさっぱりしてます。袋詰めでも売っておりますが、<span class="marker-yellow">買うなら箱で買った方が確実にお得です</span></p>
+          </div>
+        </div>
+  
+        <div class="item" data-type="pellican">
+          <div class="item-content">
+            <img src="../common/images/recommended_02.jpg" alt="">
+            <p><em>浅草ペリカンのパン</em><br>
+            このパンめちゃくちゃ美味いです。<br>
+            <span class="marker-yellow">少し厚めに切ってトーストするだけ！</span><br>
+            パン自体ギュッとつまっているので完全にご飯の代わりになりますよー</p>
+
+          </div>
+        </div>
+  
+        <div class="item" data-type="meat_fish">
+          <div class="item-content">
+            <img src="../common/images/store_09.jpg" alt="">
+            <p><em>自家製〆さば</em><br>
+            サバを市場で仕入れてから<span class="marker-yellow">千鳥酢と礼文島の利尻昆布を使ってしめてます！</span><br>
+            サバの脂のノリが良いのとこだわりの調味料を使っているのでめちゃうまいです！<br>
+            オススメは半レアで食べることです</p>
+          </div>
+        </div>
+  
+        <div class="item" data-type="vege">
+          <div class="item-content">
+            <img src="../common/images/store_08.jpg" alt="">
+            <p><em>千葉県産 かぶ</em><br>
+            当店では、大きいかぶを取り扱っております！鮮度も良いですし、<span class="marker-yellow">大きさもしっかりしているので食べ応え十分です</span></p>
+          </div>
+        </div>
+  
+        <div class="item" data-type="fruits">
+          <div class="item-content">
+            <img src="../common/images/store_02.jpg" alt="">
+            <p><em>福岡県産 あまおうDX</em><br>
+              当店、いちごは福岡のあまおうのみ扱っております。つまりはあまおうのおいしさに惹かれております！<span class="marker-yellow">いちごの風味もあり、甘さもあり、程よい酸味もあり3つのバランスが最高です！</span></p>
+          </div>
+        </div>
+  
+        <div class="item" data-type="vege">
+          <div class="item-content">
+            <img src="../common/images/recommended_03.jpg" alt="">
+            <p><em>とちぎ産菌床しいたけ</em><br>
+            身が大きくてぷりぷり！<br>
+            <span class="marker-yellow">純粋にグリルで焼いて塩とレモンで最高にうまいです！</span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+</main>
+
+<footer>
+<div class="footer-inner">
+<address>Copyright(C)2020 藤本商店,Allright Reserved.</address>
+</div>
+</footer>
+
+<script src="../common/js/common.js"></script>
+<script src="../common/lib/slick/slick.min.js"></script>
+<script src="../common/js/init.js"></script>
+<script>
+</script>
+
+</body>
+</html>
