@@ -569,6 +569,13 @@ header {
   background-position: bottom;
 }
 
+.parallax-inner.parallax_main {
+  background-image: url(../images/about_main_bg.png);
+  z-index: 1;
+  background-attachment: fixed;
+  background-position: top;
+}
+
 .parallax-inner.parallax01 {
   background-image: url(../images/parallax_01.png);
   z-index: 1;
@@ -925,4 +932,8 @@ footer {
 
 .point-list dd {
   margin-bottom: 1.5rem;
+}
+
+.about-main.parallax-cont {
+  height: 35rem;
 }
