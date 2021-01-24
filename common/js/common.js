@@ -3,7 +3,7 @@ const headerHeight = $('header').height();
 const mediaSp = matchMedia('(max-width: 940px)').matches;
 
 $(document).ready(function() {
-  if(mediaSp){
+  if(mediaSp || document.URL.match(/about/)){
      return false;
   }
   $('main').css({'padding-top':headerHeight + 'px'});
@@ -57,7 +57,7 @@ slideToggle();
 
 //ページトップ用パララックス
 $(window).on('scroll' , function(){
-  let target = $(".parallax-inner");
+  let target = $(".parallax-inner,.parallax");
   let scrollPosition = $(window).scrollTop();
   target.each(function(){
   let speed = $(this).data('js-speed');

@@ -266,6 +266,19 @@ header {
   }
 }
 
+.global-nav ul li a.social-media i {
+  font-size: 1.6rem;
+  color: #ff8500;
+}
+
+.global-nav ul li a.social-media:before {
+  content: none;
+}
+
+.global-nav ul li a.social-media:hover, .global-nav ul li a.social-media:focus, .global-nav ul li a.social-media:active {
+  opacity: .7;
+}
+
 .global-nav.active ul li a:before {
   width: 100%;
 }
@@ -541,6 +554,10 @@ header {
   }
 }
 
+.parallax {
+  position: fixed;
+}
+
 .parallax-cont {
   width: 100vw;
   height: 100vh;
@@ -569,7 +586,7 @@ header {
   background-position: bottom;
 }
 
-.parallax-inner.parallax_main {
+.parallax-inner.parallax-main {
   background-image: url(../images/about_main_bg.png);
   z-index: 1;
   background-attachment: fixed;
@@ -650,7 +667,8 @@ header {
   height: 100%;
   border-radius: .5rem;
   padding: .75rem;
-  background-color: #f0f0f0;
+  background-color: #fcfcfc;
+  box-shadow: 11px 11px 22px #dbdbdb, -11px -11px 22px #ffffff;
 }
 
 .item-content p {

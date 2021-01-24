@@ -283,6 +283,18 @@ ul{
           width:0;
         }
         }
+        &.social-media{
+          i{
+            font-size:1.6rem;
+            color:$main-color;
+          }
+          &:before{
+            content:none;
+          }
+          &:hover,&:focus,&:active{
+            opacity:.7;
+          }
+        }
       }
   }
 }
@@ -533,6 +545,10 @@ div{
   }
 }
 
+//--parallax--//
+.parallax{
+  position:fixed;
+}
 .parallax-cont{
   width:100vw;
   height:100vh;
@@ -557,7 +573,7 @@ div{
   transition:all .2s;
   background-size:cover;
   background-position:bottom;
-  &.parallax_main{
+  &.parallax-main{
     background-image: url(../images/about_main_bg.png);
     z-index: 1;
     background-attachment:fixed;
@@ -625,7 +641,8 @@ div{
   height: 100%;
   border-radius:.5rem;
   padding:.75rem;
-  background-color: #f0f0f0;
+  background-color: #fcfcfc;
+  box-shadow:11px 11px 22px #dbdbdb, -11px -11px 22px #ffffff;
   p{
     margin-bottom:1rem;
   }
