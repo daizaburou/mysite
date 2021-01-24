@@ -142,6 +142,22 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
   margin-left:.8rem;
 }
 }
+//btn
+.btn{
+    font-size: 1.2rem;
+    text-align:center;
+    padding: 0.25rem 2rem;
+    background-color: #ff8500;
+    border-radius: 0.25rem;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+      background-color:#000;
+    }
+    a{
+      color: #fff;
+    }
+}
 //アライン調整//
 .align-r{
   text-align:right!important;
@@ -174,7 +190,27 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
 //flex//
 .flex-container{
   display:flex;
-  margin-bottom:2rem
+  margin-bottom:2rem;
+  &.col-2 > *{
+    min-width:48%;
+    &:first-child{
+      margin-right:4%;
+    }
+  }
+  &.col-3 > *{
+    min-width:30%;
+    margin-right:5%;
+    &:last-child{
+      margin-right:0;
+    }
+  }
+  &.col-4 > *{
+    min-width:22%;
+    margin-right:4%;
+    &:last-child{
+      margin-right:0;
+    }
+  }
 }
 //======================//
 //======= header =======//
@@ -917,8 +953,7 @@ footer{
 
 .about-contents{
   padding: .75rem;
-  margin-right: 3rem;
-  border-radius: 8px;
+  border-radius: .5rem;
   background: #fff;
   box-shadow: 11px 11px 22px 5px #a7a7a7;
 }

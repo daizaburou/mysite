@@ -105,6 +105,24 @@ ul.list-bullet {
   margin-left: .8rem;
 }
 
+.btn {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.25rem 2rem;
+  background-color: #ff8500;
+  border-radius: 0.25rem;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+}
+
+.btn a {
+  color: #fff;
+}
+
 .align-r {
   text-align: right !important;
 }
@@ -140,6 +158,32 @@ ul.list-bullet {
 .flex-container {
   display: flex;
   margin-bottom: 2rem;
+}
+
+.flex-container.col-2 > * {
+  min-width: 48%;
+}
+
+.flex-container.col-2 > *:first-child {
+  margin-right: 4%;
+}
+
+.flex-container.col-3 > * {
+  min-width: 30%;
+  margin-right: 5%;
+}
+
+.flex-container.col-3 > *:last-child {
+  margin-right: 0;
+}
+
+.flex-container.col-4 > * {
+  min-width: 22%;
+  margin-right: 4%;
+}
+
+.flex-container.col-4 > *:last-child {
+  margin-right: 0;
 }
 
 header {
@@ -974,8 +1018,7 @@ footer {
 
 .about-contents {
   padding: .75rem;
-  margin-right: 3rem;
-  border-radius: 8px;
+  border-radius: .5rem;
   background: #fff;
   box-shadow: 11px 11px 22px 5px #a7a7a7;
 }
