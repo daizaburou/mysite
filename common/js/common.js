@@ -2,13 +2,32 @@
 const headerHeight = $('header').height();
 const mediaSp = matchMedia('(max-width: 940px)').matches;
 
-$(document).ready(function() {
+//高さ調整
+(function(){
+  $(document).ready(function() {
+    addHeaderHeight();
+    addParallaxHeight();
+  });
+
+const addHeaderHeight = () =>{
   if(mediaSp || document.URL.match(/about/)){
-     return false;
+    return false;
   }
   $('main').css({'padding-top':headerHeight + 'px'});
-});
+}
 
+//パララックス用の高さ調節
+const addParallaxHeight = () =>{
+  let target = $(".parallax");
+  target.each(function(){
+    let parallaxHeight = $(this).height();
+    let parallaxNext = $(this).next();
+    if(parallaxNext.hasClass('parallax-height')){
+      parallaxNext.css({ 'height' : parallaxHeight + 'px'} );
+    }
+  });
+}
+})();
 
 //スライドトグル
 const slideToggle = function(){

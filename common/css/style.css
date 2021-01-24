@@ -555,13 +555,25 @@ header {
 }
 
 .parallax {
+  width: 100%;
   position: fixed;
+  transform: translateY(0px);
+  transition: all .2s;
+  background-size: cover;
+}
+
+.parallax.parallax-main {
+  background-image: url(../images/about_main_bg.png);
+  background-position: top;
+  height: 60vh;
 }
 
 .parallax-cont {
   width: 100vw;
   height: 100vh;
   position: relative;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .parallax-cont .content {
@@ -584,13 +596,6 @@ header {
   transition: all .2s;
   background-size: cover;
   background-position: bottom;
-}
-
-.parallax-inner.parallax-main {
-  background-image: url(../images/about_main_bg.png);
-  z-index: 1;
-  background-attachment: fixed;
-  background-position: top;
 }
 
 .parallax-inner.parallax01 {
@@ -952,6 +957,25 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.about-main.parallax-cont {
-  height: 35rem;
+.about-main {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.about-main .content {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.about-contents {
+  padding: .75rem;
+  margin-right: 3rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 11px 11px 22px 5px #a7a7a7;
 }

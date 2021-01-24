@@ -162,7 +162,7 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
   max-width:1240px;
 	padding-right:1.25rem;
 	padding-left:1.25rem;
-	margin:0 auto;
+  margin:0 auto;
 }
 .contents{
   padding: 2rem;
@@ -547,12 +547,23 @@ div{
 
 //--parallax--//
 .parallax{
+  width:100%;
   position:fixed;
+  transform:translateY(0px);
+  transition:all .2s;
+  background-size:cover;
+  &.parallax-main{
+    background-image: url(../images/about_main_bg.png);
+    background-position:top;
+    height:60vh;
+  }
 }
 .parallax-cont{
   width:100vw;
   height:100vh;
   position: relative;
+  z-index:1;
+  background-color:#fff;
   .content{
     width: 100%;
     max-width:1240px;
@@ -573,12 +584,6 @@ div{
   transition:all .2s;
   background-size:cover;
   background-position:bottom;
-  &.parallax-main{
-    background-image: url(../images/about_main_bg.png);
-    z-index: 1;
-    background-attachment:fixed;
-    background-position:top;
-  }
   &.parallax01{
     background-image: url(../images/parallax_01.png);
     z-index: 1;
@@ -896,6 +901,24 @@ footer{
 //===== about =====//
 //======================//
 
-.about-main.parallax-cont{
-  height:35rem;
+.about-main{
+  width:100%;
+  position:relative;
+  z-index:1;
+  background-color:#fff;
+  .content{
+    width:100%;
+    max-width:1240px;
+    margin:0 auto;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+.about-contents{
+  padding: .75rem;
+  margin-right: 3rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 11px 11px 22px 5px #a7a7a7;
 }
