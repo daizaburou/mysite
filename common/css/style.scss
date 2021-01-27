@@ -179,6 +179,7 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
 	padding-right:1.25rem;
 	padding-left:1.25rem;
   margin:0 auto;
+//  overflow:hidden;
 }
 .contents{
   padding: 2rem;
@@ -209,6 +210,58 @@ background: linear-gradient(transparent 50%, #a3ffff 50%);
     margin-right:4%;
     &:last-child{
       margin-right:0;
+    }
+  }
+}
+//-- NEW --//
+.new{
+  color: #dd2222;
+  border-right: 1px solid #dd2222;
+  border-left: 1px solid #dd2222;
+  margin-right: .5rem;
+  padding: .25rem;
+}
+.holiday{
+  color: #2222dd;
+  border-right: 1px solid #2222dd;
+  border-left: 1px solid #2222dd;
+  margin-right: .5rem;
+  padding: .25rem;
+}
+//-- loop-x --//
+@keyframes loop-x {
+  0% {
+      transform: translate3d(0, 0, 0);
+      visibility: visible
+  }
+  100% {
+      transform: translate3d(-100%, 0, 0)
+  }
+}
+.loop-x-wrap{
+display:inline-flex;
+margin-bottom: 2rem;
+overflow: hidden;
+width:100%;
+}
+.loop-x{
+animation: loop-x 20s linear infinite;
+width:100%;
+display:inline-flex;
+white-space:nowrap;
+p{
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  }
+}
+//-- info --//
+.info{
+  margin-bottom: 2rem;
+  li{
+    margin-bottom: .5rem;
+    span{
+      margin-right:.5rem;
     }
   }
 }
@@ -288,7 +341,7 @@ ul{
   li{
     display:inline-block;
     margin-top: .3rem;
-    margin-right: 2.5rem;
+    margin-right: 2rem;
     @include min-tl {
       &:hover a:before {
         top: -20px;
@@ -587,7 +640,7 @@ div{
   width:100%;
   position:fixed;
   transform:translateY(0px);
-  transition:all .2s;
+//  transition:all .2s;
   background-size:cover;
   &.parallax-main{
     background-image: url(../images/about_main_bg.png);

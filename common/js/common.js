@@ -8,7 +8,9 @@ const mediaSp = matchMedia('(max-width: 940px)').matches;
     addHeaderHeight();
     addParallaxHeight();
   });
-
+$(window).on('resize' , function(){
+    addParallaxHeight();
+});
 const addHeaderHeight = () =>{
   if(mediaSp || document.URL.match(/about/)){
     return false;
