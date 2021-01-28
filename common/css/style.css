@@ -7,6 +7,10 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+body {
+  color: #333333;
+}
+
 ul, ol {
   list-style: none;
   margin-bottom: 1.5rem;
@@ -79,7 +83,7 @@ ul.list-bullet {
 }
 
 .marker-blue {
-  background: linear-gradient(transparent 50%, #a3ffff 50%);
+  background: linear-gradient(transparent 50%, #c7dafe 50%);
 }
 
 .link {
@@ -221,7 +225,6 @@ ul.list-bullet {
 
 .loop-x {
   animation: loop-x 20s linear infinite;
-  width: 100%;
   display: inline-flex;
   white-space: nowrap;
 }
@@ -229,7 +232,7 @@ ul.list-bullet {
 .loop-x p {
   display: inline-block;
   margin-bottom: 0;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .info {
@@ -238,6 +241,8 @@ ul.list-bullet {
 
 .info li {
   margin-bottom: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #aaa;
 }
 
 .info li span {

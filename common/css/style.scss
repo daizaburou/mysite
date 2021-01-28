@@ -48,6 +48,9 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
 }
+body{
+  color: #333333;
+}
 ul, ol{
   list-style:none;
   margin-bottom:1.5rem;
@@ -117,7 +120,7 @@ background: linear-gradient(transparent 50%, #ffff66 50%);
 background: linear-gradient(transparent 50%, #beedbe 50%);
 }
 .marker-blue{
-background: linear-gradient(transparent 50%, #a3ffff 50%);
+background: linear-gradient(transparent 50%,#c7dafe 50%);
 }
 //リンク//
 .link{
@@ -246,13 +249,12 @@ width:100%;
 }
 .loop-x{
 animation: loop-x 20s linear infinite;
-width:100%;
 display:inline-flex;
 white-space:nowrap;
 p{
   display: inline-block;
   margin-bottom: 0;
-  margin-right: 1rem;
+  margin-right: 2rem;
   }
 }
 //-- info --//
@@ -260,6 +262,8 @@ p{
   margin-bottom: 2rem;
   li{
     margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #aaa;
     span{
       margin-right:.5rem;
     }
