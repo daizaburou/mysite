@@ -27,6 +27,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^4.1.0",
+    "jquery": "^3.6.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.4.0",
@@ -34,7 +35,9 @@
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-scss": "^1.0.0-security",
     "stylelint-prettier": "^1.2.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.40.0",
+    "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "intersection-observer": "^0.12.0"
