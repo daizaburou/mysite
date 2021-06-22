@@ -1,4 +1,4 @@
-gulp-clean-css'use strict';
+'use strict';
 const path = require('path');
 const gulp = require('gulp');
 const fs = require('fs-extra');
@@ -6,7 +6,6 @@ const mkdirp = require('mkdirp');
 const csvSync = require('csv-parse/lib/sync');
 const stringify = require('json-stable-stringify');
 const pug = require('gulp-pug');
-const CacheBuster = require('gulp-cachebust');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const postcss = require('gulp-postcss');
@@ -36,13 +35,6 @@ const config = {
   },
   baseDir: './dist', // browser-syncのbaseDir
 };
-
-const cachebust = new CacheBuster({
-  pathFormatter: function (dirname, basename, extname, checksum) {
-    return path.join(dirname, basename + extname + '?' + checksum);
-  },
-});
-cachebust.mappings = require(`${config.srcDir}/${config.src.html}/_data/config/cachebustMappings.json`);
 
 class Utility {
   static writeFileSync(filepath, contents, callback) {
@@ -110,7 +102,6 @@ function buildPug(done) {
             },
           })
         )
-        .pipe(cachebust.references())
         .pipe(gulp.dest(`${config.destDir}/${destPath.area}/${destPath.lang}/${templateDir}`));
     }
   }
@@ -128,7 +119,6 @@ function buildPug(done) {
         },
       })
     )
-    .pipe(cachebust.references())
     .pipe(gulp.dest(`${config.destDir}/${config.dest.html}`));
   done();
 }
@@ -191,15 +181,6 @@ function getHash() {
     .src([`${config.destDir}/${config.dest.css}/*`, `${config.destDir}/${config.dest.js}/*`], {
       base: `${config.destDir}`,
     })
-    .pipe(cachebust.resources());
-}
-function saveHash(done) {
-  console.log(cachebust.mappings);
-  fs.writeFileSync(
-    `${config.srcDir}/${config.src.html}/_data/config/cachebustMappings.json`,
-    JSON.stringify(cachebust.mappings, null, '  ')
-  );
-  done();
 }
 
 // ホットリロード

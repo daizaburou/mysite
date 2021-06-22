@@ -1,0 +1,20 @@
+{
+    "cSpell.words": [
+      "gulpif",
+      "mixins",
+      "mqpacker",
+      "precomposed",
+      "sawarabi",
+      "scrollify",
+      "stylelint",
+      "superiazx",
+      "swiper",
+      "texttrack",
+      "mysite",
+      "gulpfile"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+}
