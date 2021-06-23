@@ -4,7 +4,7 @@
   "description": "クラス名はケバブケース ▼例 class=\"main-vis\",class=\"global-nav\"",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
