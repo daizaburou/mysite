@@ -895,14 +895,14 @@ footer {
   color: #fff;
 }
 
-.recomends {
+.recommmends {
   display: flex;
   justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.recomends .recomend {
+.recommmends ..recomend {
   border-radius: 2.5rem;
   background: #fcfcfc;
   box-shadow: inset 11px 11px 22px #dbdbdb, inset -11px -11px 22px #ffffff;
@@ -910,7 +910,7 @@ footer {
   margin: 1.5rem;
 }
 
-.recomends .recomend .slider-img > img {
+.recommmends ..recomend .slider-img > img {
   width: 100%;
   border-radius: 40px;
 }
