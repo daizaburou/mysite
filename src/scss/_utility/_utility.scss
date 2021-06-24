@@ -1,0 +1,121 @@
+.u-pc {
+  @include mobile {
+    display: none !important;
+  }
+}
+.u-sp {
+  @include desktop {
+    display: none !important;
+  }
+}
+.u-pc-narrow {
+  @include desktop-narrow {
+    display: none !important;
+  }
+}
+.u-inline-block {
+  display: inline-block !important;
+}
+.u-text-center {
+  text-align: center;
+}
+.u-block-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%centering {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%sp-width {
+  @include mobile {
+    width: ((330 /375) * 100) + vw;
+  }
+}
+
+.u-width {
+  @extend %centering;
+  @extend %sp-width;
+  &[data-u-width='min-narrow'] {
+    @include desktop {
+      max-width: $content-width-min-narrow-pc;
+    }
+  }
+  &[data-u-width='narrow'] {
+    @include desktop {
+      max-width: $content-width-narrow-pc;
+    }
+  }
+  &[data-u-width='middle'] {
+    @include desktop {
+      max-width: $content-width-pc;
+    }
+  }
+  &[data-u-width='wide'] {
+    @include desktop {
+      max-width: $content-width-wide-pc;
+    }
+  }
+}
+
+$margin-values: 0, 10, 15, 20, 24, 30, 32, 40, 45, 48, 52, 64, 70, 80, 100, 120, 160, 200, 240;
+
+@each $value in $margin-values {
+  .u-pt#{$value} {
+    padding-top: #{$value}px !important;
+  }
+  .u-pt#{$value}--pc {
+    @include desktop {
+      padding-top: #{$value}px !important;
+    }
+  }
+  .u-pt#{$value}--sp {
+    @include mobile {
+      padding-top: #{$value}px !important;
+    }
+  }
+  .u-mt#{$value} {
+    margin-top: #{$value}px !important;
+  }
+  .u-mt#{$value}--pc {
+    @include desktop {
+      margin-top: #{$value}px !important;
+    }
+  }
+  .u-mt#{$value}--sp {
+    @include mobile {
+      margin-top: #{$value}px !important;
+    }
+  }
+  .u-ml#{$value} {
+    margin-left: #{$value}px !important;
+  }
+}
+
+.u-hover-opacity {
+  @include hover-opacity;
+}
+
+.u-bg-citrine-white {
+  background-color: $color-citrine-white;
+}
+.u-bg-alabaster {
+  background-color: $color-alabaster;
+}
+.u-bg-neon-carrot {
+  background-color: $color-neon-carrot;
+}
+.u-bg-white {
+  background-color: $color-white;
+}
+.u-bg-selective-yellow {
+  background-color: $color-selective-yellow;
+}
+.u-bg-ivory {
+  background-color: $color-ivory;
+}
+.u-bg-gallery {
+  background-color: $color-gallery;
+}

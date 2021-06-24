@@ -4,7 +4,8 @@
   "description": "クラス名はケバブケース ▼例 class=\"main-vis\",class=\"global-nav\"",
   "main": "gulpfile.js",
   "scripts": {
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "build:scss": "gulp build:scss"
   },
   "repository": {
     "type": "git",
@@ -17,30 +18,14 @@
   },
   "homepage": "https://github.com/daizaburou/mysite#readme",
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.14",
     "css-mqpacker": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-ejs": "^5.1.0",
-    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
-    "gulp-pug": "^5.0.0",
     "gulp-sass": "^4.1.0",
-    "jquery": "^3.6.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recess-order": "^2.4.0",
-    "stylelint-config-recommended": "^5.0.0",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-scss": "^1.0.0-security",
-    "stylelint-prettier": "^1.2.0",
-    "stylelint-scss": "^3.19.0",
-    "webpack": "^5.40.0",
-    "webpack-stream": "^6.1.2"
+    "gulp-sass-glob": "^1.1.0"
   },
-  "dependencies": {
-    "intersection-observer": "^0.12.0"
-  }
+  "dependencies": {}
 }

@@ -1,13 +1,29 @@
 'use strict';
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const cleanCss = require('gulp-clean-css');
+const sassGlob = require('gulp-sass-glob');
+
+// const path = require('path');
+// const gulp = require('gulp');
+// const fs = require('fs-extra');
+// const mkdirp = require('mkdirp');
+// const csvSync = require('csv-parse/lib/sync');
+// const stringify = require('json-stable-stringify');
+// const pug = require('gulp-pug');
+// const CacheBuster = require('gulp-cachebust');
+// const sass = require('gulp-sass');
+// const sassGlob = require('gulp-sass-glob');
+const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
-const webpackStream = require('webpack-stream');
-const webpack = require('webpack');
-const plumber = require('gulp-plumber');
+const cleanCss = require('gulp-clean-css');
+// const webpackStream = require('webpack-stream');
+// const webpack = require('webpack');
+// const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync').create();
+// const packageImporter = require('node-sass-package-importer');
+// const glob = require('glob');
+
 
 const config = {
   srcDir: './src',
@@ -30,14 +46,10 @@ const config = {
 function buildScss() {
   return gulp
     .src(`${config.srcDir}/${config.src.css}/*.scss`)
-    .pipe(plumber())
+    .pipe(sassGlob())
+    // .pipe(plumber())
     .pipe(
-      sass({
-        importer: packageImporter({
-          extensions: ['.scss', '.css'],
-        }),
-        outputStyle: 'expanded',
-      })
+      sass({outputStyle: 'expanded'})
     )
     .pipe(postcss([mqpacker(), autoprefixer()]))
     .pipe(cleanCss())
@@ -85,26 +97,26 @@ function buildScss() {
 //     })
 // }
 
-// // ホットリロード
-// function sync() {
-//   browserSync.init({
-//     server: config.baseDir,
-//   });
-// }
-// function reload(done) {
-//   browserSync.reload();
-//   done();
-// }
-// function watch() {
+// ホットリロード
+function sync() {
+  browserSync.init({
+    server: config.baseDir,
+  });
+}
+function reload(done) {
+  browserSync.reload();
+  done();
+}
+function watch() {
 //   gulp.watch(`${config.srcDir}/${config.src.html}/**/*`, gulp.series(buildPug, reload));
-//   gulp.watch(`${config.srcDir}/${config.src.css}/**/*`, gulp.series(buildScss, reload));
+  gulp.watch(`${config.srcDir}/${config.src.css}/**/*`, gulp.series(buildScss, reload));
 //   gulp.watch(`${config.srcDir}/${config.src.js}/**/*`, gulp.series(buildJs, reload));
 //   gulp.watch(`${config.srcDir}/${config.src.csv}/**/*`, gulp.series(exportJson, buildPug, reload));
-// }
+}
 
 // exports['production'] = gulp.series(gulp.parallel(exportJson, buildScss, buildJs), getHash, saveHash, buildPug);
 // exports['build'] = gulp.parallel(gulp.series(exportJson, buildPug), buildScss, buildJs);
 // exports['build:pug'] = gulp.series(exportJson, buildPug);
 exports['build:scss'] = buildScss;
 // exports['build:js'] = buildJs;
-// exports['watch'] = gulp.parallel(sync);
+exports['watch'] = gulp.parallel(sync, watch);
