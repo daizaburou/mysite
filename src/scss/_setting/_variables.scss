@@ -1,35 +1,35 @@
 // 画面幅
-$breakpoint-narrow: 600px;
-$breakpoint: 768px;
-$breakpoint-wide: 1366px;
-$breakpoint-desktop-narrow: 1100px;
+// $breakpoint-narrow: 600px;
+// $breakpoint: 768px;
+// $breakpoint-wide: 1366px;
+// $breakpoint-desktop-narrow: 1100px;
 
 // コンテンツ幅
-$content-width-pc: 860px;
-$content-width-narrow-pc: 760px;
-$content-width-min-narrow-pc: 680px;
-$content-width-wide-pc: 1040px;
+// $content-width-pc: 860px;
+// $content-width-narrow-pc: 760px;
+// $content-width-min-narrow-pc: 680px;
+// $content-width-wide-pc: 1040px;
+
+$pc: 1200px;
+$max-sp: 767px;
+$min-sp: 768px;
+$max-tl: 959px;
+$min-tl: 960px;
+
 
 // 色
 $color-white: #fff;
 $color-black: #000;
-$color-mine-shaft: #333333;
-$color-neon-carrot: #ff903d;
-$color-citrine-white: #fafce6;
-$color-alabaster: #fafafa;
-$color-selective-yellow: #fcb700;
-$color-ivory: #fefff0;
-$color-gallery: #f0f0f0;
-$color-alto: #dedede;
-$color-chardonnay: #ffc58d;
-$color-gray: #8d8d8d;
 
-// ベーステキスト
-$base-font-family: 'Noto Sans', 'Noto Sans CJK JP', sans-serif;
-$base-font-color: $color-mine-shaft;
-$base-font-size: 16px;
-$base-line-height: 2;
-$base-letter-spacing: 0.05em;
+$main-color: #ff8500;
+$sub-color: #40c700;
 
-// その他
-$transition-duration: 0.3s;
+// // ベーステキスト
+// $base-font-family: 'Noto Sans', 'Noto Sans CJK JP', sans-serif;
+// $base-font-color: $color-mine-shaft;
+// $base-font-size: 16px;
+// $base-line-height: 2;
+// $base-letter-spacing: 0.05em;
+
+// // その他
+// $transition-duration: 0.3s;

@@ -1,53 +1,78 @@
-// PCデザイン
-@mixin desktop {
-  @media screen and (min-width: $breakpoint + 1), print {
-    @content;
-  }
-}
-// SPデザイン
-@mixin mobile {
-  @media screen and (max-width: $breakpoint) {
-    @content;
-  }
-}
-// PCの範囲の中でも広い場合
-@mixin desktop-wide {
-  @media screen and (min-width: $breakpoint-wide + 1) {
+// オリジナル
+@mixin pc {
+  @media (min-width: ($min-sp)) {
     @content;
   }
 }
 
-// PCの範囲の中でも狭い場合
-@mixin desktop-narrow {
-  @media screen and (min-width: $breakpoint + 1) and (max-width: $breakpoint-desktop-narrow) {
+@mixin sp {
+  @media (max-width: ($max-sp)) {
     @content;
   }
 }
 
-// $breakpoint-wide のときのpx指定を元にvwに変換
-@mixin clamp-property($property, $px-pc, $px-sp: null) {
-  @if ($px-sp) {
-    @include mobile {
-      #{$property}: $px-sp;
-    }
-  }
-  @include desktop {
-    #{$property}: px2vw($px-pc);
-  }
-  @include desktop-wide {
-    #{$property}: $px-pc;
-  }
-}
-@mixin width($width) {
-  @include desktop {
-    width: px2vw($width);
-    max-width: $width;
+@mixin max-tl {
+  @media (max-width: ($max-tl)) {
+    @content;
   }
 }
 
-@mixin hover-opacity {
-  transition: opacity $transition-duration ease-in-out;
-  &:hover {
-    opacity: 0.6;
+@mixin min-tl {
+  @media (min-width: ($min-tl)) {
+    @content;
   }
 }
+
+// // PCデザイン
+// @mixin desktop {
+//   @media screen and (min-width: $breakpoint + 1), print {
+//     @content;
+//   }
+// }
+// // SPデザイン
+// @mixin mobile {
+//   @media screen and (max-width: $breakpoint) {
+//     @content;
+//   }
+// }
+// // PCの範囲の中でも広い場合
+// @mixin desktop-wide {
+//   @media screen and (min-width: $breakpoint-wide + 1) {
+//     @content;
+//   }
+// }
+
+// // PCの範囲の中でも狭い場合
+// @mixin desktop-narrow {
+//   @media screen and (min-width: $breakpoint + 1) and (max-width: $breakpoint-desktop-narrow) {
+//     @content;
+//   }
+// }
+
+// // $breakpoint-wide のときのpx指定を元にvwに変換
+// @mixin clamp-property($property, $px-pc, $px-sp: null) {
+//   @if ($px-sp) {
+//     @include mobile {
+//       #{$property}: $px-sp;
+//     }
+//   }
+//   @include desktop {
+//     #{$property}: px2vw($px-pc);
+//   }
+//   @include desktop-wide {
+//     #{$property}: $px-pc;
+//   }
+// }
+// @mixin width($width) {
+//   @include desktop {
+//     width: px2vw($width);
+//     max-width: $width;
+//   }
+// }
+
+// @mixin hover-opacity {
+//   transition: opacity $transition-duration ease-in-out;
+//   &:hover {
+//     opacity: 0.6;
+//   }
+// }
