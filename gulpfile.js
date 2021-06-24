@@ -41,9 +41,13 @@ const config = {
 
 // EJS
 
-function buildEjs() {
-  return gulp
-  .src(`${config.srcDir}/${config.src.html}/*.ejs`,`!${config.srcDir}/${config.src.html}/**/_*.ejs`)//_付きは読み込まない
+function buildEjs(done) {
+  gulp
+  .src(`${config.srcDir}/${config.src.html}/**/*.ejs`,`!${config.srcDir}/${config.src.html}/**/_*.ejs`)//_付きは読み込まない
+  .pipe(ejs({}, {}, { ext: ".html" }))
+  .pipe(rename({ extname: ".html" }))
+  .pipe(gulp.dest(`${config.destDir}/${config.dest.html}`));
+  done();
 }
 
 // CSS
@@ -112,14 +116,14 @@ function reload(done) {
   done();
 }
 function watch() {
-//   gulp.watch(`${config.srcDir}/${config.src.html}/**/*`, gulp.series(buildEjs, reload));
+  gulp.watch(`${config.srcDir}/${config.src.html}/**/*`, gulp.series(buildEjs, reload));
   gulp.watch(`${config.srcDir}/${config.src.css}/**/*`, gulp.series(buildScss, reload));
 //   gulp.watch(`${config.srcDir}/${config.src.js}/**/*`, gulp.series(buildJs, reload));
 }
 
 // exports['production'] = gulp.series(gulp.parallel(exportJson, buildScss, buildJs), getHash, saveHash, buildPug);
 // exports['build'] = gulp.parallel(gulp.series(exportJson, buildPug), buildScss, buildJs);
-// exports['build:pug'] = gulp.series(exportJson, buildPug);
+exports['build:ejs'] = gulp.series(buildEjs);
 exports['build:scss'] = buildScss;
 // exports['build:js'] = buildJs;
 exports['watch'] = gulp.parallel(sync, watch);

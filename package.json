@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "watch": "gulp watch",
-    "build:scss": "gulp build:scss"
+    "build:scss": "gulp build:scss",
+    "build:ejs": "gulp build:ejs"
   },
   "repository": {
     "type": "git",
