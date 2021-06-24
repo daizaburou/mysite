@@ -1,0 +1,19 @@
+body {
+  position: relative;
+  width: 100%;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  letter-spacing: $base-letter-spacing;
+  letter-spacing: 0.01em;
+  overflow-wrap: break-word;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

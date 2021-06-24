@@ -1,6 +1,7 @@
 'use strict';
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const cleanCss = require('gulp-clean-css');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const webpackStream = require('webpack-stream');
@@ -31,7 +32,6 @@ function buildScss() {
   return gulp
     .src(`${config.srcDir}/${config.src.css}/*.scss`)
     .pipe(plumber())
-    .pipe(sassGlob())
     .pipe(
       sass({
         importer: packageImporter({
