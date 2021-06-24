@@ -152,12 +152,6 @@ h3::before {
   padding-right: 0.6rem;
   border-left: 7px solid $sub-color;
 }
-h4 {
-}
-h5 {
-}
-h6 {
-}
 p {
   margin-bottom: 2rem;
   color: #333;
@@ -291,8 +285,6 @@ ul {
 .image-right {
   display: flex;
   margin-bottom: 2rem;
-  & > * {
-  }
 }
 //-- NEW --//
 .new {
