@@ -1,6 +1,7 @@
 'use strict';
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
+const path = require('path');
 
 //sass用
 const sass = require('gulp-sass');
@@ -14,15 +15,18 @@ const cleanCss = require('gulp-clean-css');
 const ejs = require('gulp-ejs');
 const rename = require('gulp-rename');
 
+//js用
+const glob = require('glob');
+
+
 const browserSync = require('browser-sync').create();
-// const path = require('path');
+
 // const fs = require('fs-extra');
 // const mkdirp = require('mkdirp');
 // const stringify = require('json-stable-stringify');
 // const webpackStream = require('webpack-stream');
 // const webpack = require('webpack');
 // const packageImporter = require('node-sass-package-importer');
-// const glob = require('glob');
 
 
 const config = {
@@ -42,7 +46,6 @@ const config = {
 };
 
 // EJS
-
 function buildEjs(done) {
   gulp
   .src(`${config.srcDir}/${config.src.html}/**/*.ejs`,`!${config.srcDir}/${config.src.html}/**/_*.ejs`)//_付きは読み込まない
@@ -68,10 +71,12 @@ function buildScss() {
 }
 
 // // JS
-// function buildJs() {
-//   const entries = glob.sync('*.js', { cwd: `${config.srcDir}/${config.src.js}` }).map(function (key) {
-//     return [key, path.resolve(`${config.srcDir}/${config.src.js}`, key)];
-//   });
+function buildJs() {
+  const entries = glob.sync('*.js', { cwd: `${config.srcDir}/${config.src.js}` }).map(function (key) {
+    return [key, path.resolve(`${config.srcDir}/${config.src.js}`, key)];
+  });
+  console.log(entries);
+}
 //   const entryObj = Object.fromEntries(entries);
 //   return webpackStream(
 //     {
@@ -120,5 +125,5 @@ function watch() {
 exports['build'] = gulp.parallel(buildEjs, buildScss,/* buildJs*/);
 exports['build:ejs'] = buildEjs;
 exports['build:scss'] = buildScss;
-// exports['build:js'] = buildJs;
+exports['build:js'] = buildJs;
 exports['watch'] = gulp.parallel(sync, watch);
