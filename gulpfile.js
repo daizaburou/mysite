@@ -1,24 +1,26 @@
 'use strict';
 const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+
+//sass用
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const cleanCss = require('gulp-clean-css');
+
+//ejs用
 const ejs = require('gulp-ejs');
 const rename = require('gulp-rename');
+
 const browserSync = require('browser-sync').create();
 // const path = require('path');
-// const gulp = require('gulp');
 // const fs = require('fs-extra');
 // const mkdirp = require('mkdirp');
 // const stringify = require('json-stable-stringify');
-// const sass = require('gulp-sass');
-// const sassGlob = require('gulp-sass-glob');
 // const webpackStream = require('webpack-stream');
 // const webpack = require('webpack');
-// const plumber = require('gulp-plumber');
 // const packageImporter = require('node-sass-package-importer');
 // const glob = require('glob');
 
@@ -44,6 +46,7 @@ const config = {
 function buildEjs(done) {
   gulp
   .src(`${config.srcDir}/${config.src.html}/**/*.ejs`,`!${config.srcDir}/${config.src.html}/**/_*.ejs`)//_付きは読み込まない
+  .pipe(plumber())
   .pipe(ejs({}, {}, { ext: ".html" }))
   .pipe(rename({ extname: ".html" }))
   .pipe(gulp.dest(`${config.destDir}/${config.dest.html}`));
@@ -55,7 +58,7 @@ function buildScss() {
   return gulp
     .src(`${config.srcDir}/${config.src.css}/*.scss`)
     .pipe(sassGlob())
-    // .pipe(plumber())
+    .pipe(plumber())
     .pipe(
       sass({outputStyle: 'expanded'})
     )
@@ -98,13 +101,6 @@ function buildScss() {
 //   ).pipe(gulp.dest(`${config.destDir}/${config.dest.js}`));
 // }
 
-// function getHash() {
-//   return gulp
-//     .src([`${config.destDir}/${config.dest.css}/*`, `${config.destDir}/${config.dest.js}/*`], {
-//       base: `${config.destDir}`,
-//     })
-// }
-
 // ホットリロード
 function sync() {
   browserSync.init({
@@ -121,9 +117,8 @@ function watch() {
 //   gulp.watch(`${config.srcDir}/${config.src.js}/**/*`, gulp.series(buildJs, reload));
 }
 
-// exports['production'] = gulp.series(gulp.parallel(exportJson, buildScss, buildJs), getHash, saveHash, buildPug);
-// exports['build'] = gulp.parallel(gulp.series(exportJson, buildPug), buildScss, buildJs);
-exports['build:ejs'] = gulp.series(buildEjs);
+exports['build'] = gulp.parallel(buildEjs, buildScss,/* buildJs*/);
+exports['build:ejs'] = buildEjs;
 exports['build:scss'] = buildScss;
 // exports['build:js'] = buildJs;
 exports['watch'] = gulp.parallel(sync, watch);
