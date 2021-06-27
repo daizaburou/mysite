@@ -1,0 +1,59 @@
+form {
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  input {
+    margin-bottom: 1rem;
+    &[type='text'],
+    &[type='tel'] {
+      width: 100%;
+      max-width: 20rem;
+      padding: 0.25rem;
+      font-size: 1.125rem;
+    }
+    &[type='date'] {
+      padding: 0.25rem;
+      font-size: 1.5rem;
+    }
+    &[type='submit'] {
+      display: block;
+      padding: 0.25rem 2rem;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      color: #fff;
+      cursor: pointer;
+      background-color: $main-color;
+      border: none;
+      border-radius: 0.25rem;
+      transition: 0.3s;
+      -webkit-appearance: button;
+      appearance: button;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+  textarea {
+    width: 100%;
+    max-width: 35rem;
+  }
+  .checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    &.col-2 {
+      label {
+        width: 50%;
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.must::after {
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  color: #ea5325;
+  content: '*';
+}

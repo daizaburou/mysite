@@ -1,0 +1,28 @@
+.scroll-fading {
+  position: relative;
+  opacity: 0;
+  transition: opacity 2.5s, left 1.5s, top 1.5s, transform 1.5s;
+  &.-left {
+    left: 3rem;
+  }
+  &.-right {
+    left: -3rem;
+  }
+  &.-top {
+    top: -3rem;
+  }
+  &.-bottom {
+    top: 3rem;
+  }
+  .-late {
+    transition: all 3s;
+  }
+  &.fade-in {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transform: none;
+  }
+}

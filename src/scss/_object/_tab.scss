@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  .tab {
+    padding: 0.375rem 2rem;
+    font-size: 1.25rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #999;
+    border-right: 1px solid #fff;
+    &.active {
+      background-color: $sub-color;
+    }
+  }
+}
+.tab-inner {
+  display: none;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  &.open {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+.toggle {
+  display: none;
+}
+.toggle-btn {
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  .toggle-btn-inner {
+    padding: 0.5rem 1.25rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #ff8500;
+    border-radius: 4px;
+    .toggle-close {
+      display: none;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 body {
   position: relative;
   width: 100%;
-  // font-family: $base-font-family;
+  font-family: $base-font-family;
   // font-size: $base-font-size;
   // line-height: $base-line-height;
-  // color: $base-font-color;
+  color: $color-base-font;
   // letter-spacing: $base-letter-spacing;
   letter-spacing: 0.01em;
   overflow-wrap: break-word;
@@ -16,4 +16,40 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+ul,
+ol {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+h3::before {
+  padding-right: 0.6rem;
+  content: '';
+  border-left: 7px solid $sub-color;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+em {
+  font-style: unset;
+  font-weight: bold;
 }

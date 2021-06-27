@@ -1,0 +1,16 @@
+.loop-x-wrap {
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.loop-x {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: loop-x 20s linear infinite;
+  p {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+}

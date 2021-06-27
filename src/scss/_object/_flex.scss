@@ -1,0 +1,24 @@
+.flex-container {
+  display: flex;
+  margin-bottom: 2rem;
+  &.col-2 > * {
+    min-width: 48%;
+    &:first-child {
+      margin-right: 4%;
+    }
+  }
+  &.col-3 > * {
+    min-width: 30%;
+    margin-right: 5%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &.col-4 > * {
+    min-width: 22%;
+    margin-right: 4%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

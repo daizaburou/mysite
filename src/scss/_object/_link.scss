@@ -1,0 +1,22 @@
+.link {
+  position: relative;
+  margin-right: 2rem;
+  color: #333;
+  &::after {
+    position: absolute;
+    top: 0.3rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.3rem;
+    content: '';
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    transition: margin 0.3s;
+    transform: rotate(45deg);
+  }
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    margin-left: 0.8rem;
+  }
+}

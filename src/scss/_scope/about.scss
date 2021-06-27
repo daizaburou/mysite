@@ -1,0 +1,20 @@
+.about-main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  .content {
+    width: 100%;
+    max-width: 1240px;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    margin: 0 auto;
+  }
+}
+
+.about-contents {
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 11px 11px 22px 5px #a7a7a7;
+}

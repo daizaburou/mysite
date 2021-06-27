@@ -1,0 +1,118 @@
+.commitment-main {
+  height: 50vh;
+  background-image: url(../images/commitment_main.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  @include max-tl {
+    height: 30vh;
+    background-image: url(../images/commitment_main_sp.jpg);
+    background-attachment: inherit;
+  }
+  .commitment-top {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.commitment-hdg {
+  h1 {
+    position: relative;
+    top: 2rem;
+    @include max-tl {
+      top: 0;
+    }
+  }
+  h3 {
+    position: relative;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 10%;
+      height: 3px;
+      margin-bottom: -0.5rem;
+      background-color: $main-color;
+      border: none;
+      transform: translateX(-50%);
+    }
+  }
+}
+.commitment-contents {
+  padding: 3rem;
+  margin-bottom: 4rem;
+  background: #fcfcfc;
+  border-radius: 8px;
+  box-shadow: 11px 11px 22px 5px #a7a7a7;
+  &.-unique01 {
+    position: relative;
+    top: -10rem;
+    left: 20rem;
+    width: 65%;
+    @include max-tl {
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+.commitment-wrap {
+  position: relative;
+  top: -10rem;
+  @include max-tl {
+    top: 0;
+  }
+  .flex-container {
+    margin-bottom: 5rem;
+    @include max-tl {
+      display: block;
+    }
+    .commitment-box {
+      position: relative;
+      top: 2rem;
+      width: 60%;
+      padding: 3rem;
+      background-color: #fcfcfc;
+      box-shadow: 11px 11px 22px 5px #a7a7a7;
+      @include max-tl {
+        top: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      p {
+        top: 50%;
+        transform: translateY(-50%);
+        @include max-tl {
+          top: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+}
+.point-list {
+  dt {
+    position: relative;
+    margin-bottom: 0.75rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    a {
+      position: relative;
+      padding: 0.5rem;
+      color: #000;
+      background: linear-gradient(90deg, rgba(208, 147, 82, 0.6), rgba(192, 134, 70, 0.6) 60%, rgba(208, 147, 82, 0.6)),
+        repeating-radial-gradient(ellipse at 60% 150%, #c08646, #c08646 0.2%, #d09352 0.6%, #d09352 1%);
+      border-radius: 4px;
+      box-shadow: 0 0 2px 1px #ccc;
+      &:hover {
+        top: -6px;
+        box-shadow: 0 6px 6px 1px #ccc;
+      }
+    }
+  }
+  dd {
+    margin-bottom: 1.5rem;
+  }
+}
