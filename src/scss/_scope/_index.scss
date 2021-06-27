@@ -1,0 +1,34 @@
+.main-vis {
+  height: 80vh;
+  margin-bottom: 2rem;
+  background-image: url(../images/main-vis.jpg);
+  background-size: cover;
+  .main-hdg {
+    height: 100%;
+    text-align: center;
+    background-color: #0000004f;
+    & > h1 {
+      position: relative;
+      top: 50%;
+      color: #fff;
+      transform: translateY(-50%);
+    }
+  }
+}
+.recommends {
+  display: flex;
+  justify-content: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  .recommend {
+    padding: 1.5rem;
+    margin: 1.5rem;
+    background: #fcfcfc;
+    border-radius: 2.5rem;
+    box-shadow: inset 11px 11px 22px #dbdbdb, inset -11px -11px 22px #fff;
+    .slider-img > img {
+      width: 100%;
+      border-radius: 40px;
+    }
+  }
+}
