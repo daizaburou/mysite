@@ -48,7 +48,7 @@ const config = {
 // EJS
 function buildEjs(done) {
   gulp
-  .src(`${config.srcDir}/${config.src.html}/**/*.ejs`,`!${config.srcDir}/${config.src.html}/**/_*.ejs`)//_付きは読み込まない
+  .src([`${config.srcDir}/${config.src.html}/**/*.ejs`,`!${config.srcDir}/${config.src.html}/**/_*.ejs`])
   .pipe(plumber())
   .pipe(ejs({}, {}, { ext: ".html" }))
   .pipe(rename({ extname: ".html" }))

@@ -15,7 +15,7 @@ const addHeaderHeight = () =>{
   if(mediaSp || document.URL.match(/about/)){
     return false;
   }
-  $('main').css({'padding-top':headerHeight + 'px'});
+  $('main').css({'paddingTop':headerheight + 'px'});
 }
 
 //パララックス用の高さ調節
@@ -25,7 +25,7 @@ const addParallaxHeight = () =>{
     let parallaxHeight = $(this).height();
     let parallaxNext = $(this).next();
     if(parallaxNext.hasClass('parallax-height')){
-      parallaxNext.css({ 'height' : parallaxHeight + 'px'} );
+      parallaxNext.css({ 'height' : parallaxheight + 'px'} );
     }
   });
 }
@@ -83,7 +83,7 @@ $(window).on('scroll' , function(){
   target.each(function(){
   let speed = $(this).data('js-speed');
   let scrollSpeed = speed * scrollPosition / 100;
-  $(this).css({ 'transform' : 'translateY(-' + scrollSpeed + 'px)' } );
+  $(this).css({ 'transform' : 'translateY(-' + scrollspeed + 'px)' } );
   });
 });
 
@@ -101,7 +101,7 @@ $(window).on('scroll' , function(){
 //スムーズスクロール
 $(function() {
 $('a[href^="#"]').click(function() {
-  let speed = 500; 
+  let speed = 500;
   let href= $(this).attr("href");
   let target = $(href == "#" || href == "" ? 'html' : href);
   let position = target.offset().top - headerHeight;
@@ -132,14 +132,14 @@ window.onload = function() {
       maxHeight = $(this).height();
     }
   });
-  
+
   $('.item').height(maxHeight);
-  
+
   const grid = new Muuri('.grid');
   const typeFilter = $('.type-filter');
-  
+
   typeFilter.change(filter);
-  
+
   function filter() {
       const typeFilterValue = typeFilter.val();
       const typeFilterName = typeFilter.attr('name');
