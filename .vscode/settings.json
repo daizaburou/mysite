@@ -34,5 +34,11 @@
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true
     },
-    "editor.formatOnSave": true
+    "javascript.format.enable": false,
+    "npm.enableRunFromFolder": true,
+    "workbench.iconTheme": "vscode-icons",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
 }
