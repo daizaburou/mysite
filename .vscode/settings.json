@@ -34,4 +34,7 @@
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true
     },
+    "htmlhint.options": {
+      "doctype-first": false,
+  }
 }
