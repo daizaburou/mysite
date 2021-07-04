@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const headerHeight = $('header').height();
 const mediaSp = matchMedia('(max-width: 940px)').matches;
 
@@ -53,12 +55,12 @@ slideToggle();
 if (sessionStorage.getItem('first-view')) {
   $('.first-view').css('display', 'none');
 } else {
-  $(document).ready(function () {
+  $(window).on('load', function () {
     setTimeout(fadeOut, 1000);
     sessionStorage.setItem('first-view', 'on');
   });
 }
-let fadeOut = function () {
+const fadeOut = function () {
   $('.first-view').addClass('-fade-out');
 };
 

@@ -85,10 +85,10 @@ function reload(done) {
 function watch() {
   gulp.watch(`${config.srcDir}/${config.src.html}/**/*`, gulp.series(buildEjs, reload));
   gulp.watch(`${config.srcDir}/${config.src.css}/**/*`, gulp.series(buildScss, reload));
-  //   gulp.watch(`${config.srcDir}/${config.src.js}/**/*`, gulp.series(buildJs, reload));
+  gulp.watch(`${config.srcDir}/${config.src.js}/**/*`, gulp.series(buildJs, reload));
 }
 
-exports['build'] = gulp.parallel(buildEjs, buildScss /* buildJs*/);
+exports['build'] = gulp.parallel(buildEjs, buildScss, buildJs);
 exports['build:ejs'] = buildEjs;
 exports['build:scss'] = buildScss;
 exports['build:js'] = buildJs;

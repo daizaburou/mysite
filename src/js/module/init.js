@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import 'slick-carousel';
+
 $('.slider').slick({
   accessibility: true,
   autoplay: false,
