@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import 'slick-carousel';
 import common from './module/common';
 import init from './module/init';
 
