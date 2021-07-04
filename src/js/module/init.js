@@ -1,4 +1,3 @@
-//slick.js
 $('.slider').slick({
   accessibility: true,
   autoplay: false,
@@ -12,14 +11,14 @@ $('.slider').slick({
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-      }
+      },
     },
     {
       breakpoint: 767,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-  });
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});

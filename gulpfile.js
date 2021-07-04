@@ -1,7 +1,6 @@
 'use strict';
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
-const path = require('path');
 
 //sass用
 const sass = require('gulp-sass');
@@ -16,14 +15,17 @@ const ejs = require('gulp-ejs');
 const rename = require('gulp-rename');
 
 //js用
-const glob = require('glob');
+// const path = require('path');
+// const glob = require('glob');
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config');
+
 const browserSync = require('browser-sync').create();
 
 // const fs = require('fs-extra');
 // const mkdirp = require('mkdirp');
 // const stringify = require('json-stable-stringify');
-// const webpackStream = require('webpack-stream');
-// const webpack = require('webpack');
 // const packageImporter = require('node-sass-package-importer');
 
 const config = {
@@ -65,41 +67,10 @@ function buildScss() {
     .pipe(gulp.dest(`${config.destDir}/${config.dest.css}`));
 }
 
-// // JS
+// JS
 function buildJs() {
-  const entries = glob.sync('*.js', { cwd: `${config.srcDir}/${config.src.js}` }).map(function (key) {
-    return [key, path.resolve(`${config.srcDir}/${config.src.js}`, key)];
-  });
-  console.log(entries);
+  return webpackStream(webpackConfig, webpack).pipe(gulp.dest(`${config.destDir}/${config.dest.js}`));
 }
-//   const entryObj = Object.fromEntries(entries);
-//   return webpackStream(
-//     {
-//       mode: 'production',
-//       entry: entryObj,
-//       output: {
-//         filename: '[name]',
-//       },
-//       plugins: [
-//         new webpack.ProvidePlugin({
-//           Promise: 'es6-promise',
-//         }),
-//       ],
-//       module: {
-//         rules: [
-//           {
-//             test: /\.js$/,
-//             exclude: /node_modules/,
-//             use: {
-//               loader: 'babel-loader',
-//             },
-//           },
-//         ],
-//       },
-//     },
-//     webpack
-//   ).pipe(gulp.dest(`${config.destDir}/${config.dest.js}`));
-// }
 
 // ホットリロード
 function sync() {

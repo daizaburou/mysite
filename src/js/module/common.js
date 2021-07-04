@@ -109,7 +109,7 @@
 
   //ハンバーガー
   $(function () {
-    $('.btn-hamb').on('click', function () {
+    $('.btn-hamburger').on('click', function () {
       $(this).toggleClass('active');
       $('.header-inner').toggleClass('active');
       setTimeout(function () {
