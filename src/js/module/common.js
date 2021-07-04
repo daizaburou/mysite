@@ -1,36 +1,7 @@
 import $ from 'jquery';
+import Muuri from 'muuri';
 
 const headerHeight = $('header').height();
-const mediaSp = matchMedia('(max-width: 940px)').matches;
-
-//高さ調整
-(function () {
-  $(document).ready(function () {
-    addHeaderHeight();
-    addParallaxHeight();
-  });
-  $(window).on('resize', function () {
-    addParallaxHeight();
-  });
-  const addHeaderHeight = () => {
-    if (mediaSp || document.URL.match(/about/)) {
-      return false;
-    }
-    $('main').css({ paddingTop: headerHeight + 'px' });
-  };
-
-  //パララックス用の高さ調節
-  const addParallaxHeight = () => {
-    let target = $('.parallax');
-    target.each(function () {
-      let parallaxHeight = $(this).height();
-      let parallaxNext = $(this).next();
-      if (parallaxNext.hasClass('parallax-height')) {
-        parallaxNext.css({ height: parallaxHeight + 'px' });
-      }
-    });
-  };
-})();
 
 //スライドトグル
 const slideToggle = function () {
@@ -52,17 +23,16 @@ const slideToggle = function () {
 slideToggle();
 
 //ファーストビュー
-if (sessionStorage.getItem('first-view')) {
-  $('.first-view').css('display', 'none');
-} else {
-  $(window).on('load', function () {
-    setTimeout(fadeOut, 1000);
+$(window).on('load', function () {
+  if (sessionStorage.getItem('first-view')) {
+    $('.first-view').css('display', 'none');
+  } else {
+    setTimeout(function () {
+      $('.first-view').addClass('-fade-out');
+    }, 1000);
     sessionStorage.setItem('first-view', 'on');
-  });
-}
-const fadeOut = function () {
-  $('.first-view').addClass('-fade-out');
-};
+  }
+});
 
 //スクロールフェイドイン
 $(window).on('scroll', function () {
