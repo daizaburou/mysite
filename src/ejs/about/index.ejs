@@ -1,7 +1,11 @@
+<%
+  const pageType = {
+    type: 'about'
+    }
+%>
 <!DOCTYPE html>
 <html lang="ja">
-<%- include('../common/_head') %>
-
+  <%- include('../common/_head', {page: pageType}) %>
   <body>
     <%- include('../common/_header') %>
       <main>

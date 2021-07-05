@@ -1,11 +1,13 @@
+<%
+  const pageType = {
+    type: 'store'
+    }
+%>
 <!doctype html>
 <html lang="ja">
-<%- include('../common/_head') %>
-
+<%- include('../common/_head', {page: pageType}) %>
   <body>
     <%- include('../common/_header') %>
-      <style>
-      </style>
       <main>
         <div class="main-content">
           <h1>商品情報</h1>
