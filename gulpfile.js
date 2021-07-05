@@ -15,11 +15,11 @@ const ejs = require('gulp-ejs');
 const rename = require('gulp-rename');
 
 //js用
-// const path = require('path');
-// const glob = require('glob');
+const path = require('path');
+const glob = require('glob');
 const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.config');
+// const webpackConfig = require('./webpack.config');
 
 const browserSync = require('browser-sync').create();
 
@@ -69,7 +69,40 @@ function buildScss() {
 
 // JS
 function buildJs() {
-  return webpackStream(webpackConfig, webpack).pipe(gulp.dest(`${config.destDir}/${config.dest.js}`));
+  const entries = glob.sync('*.js', { cwd: `${config.srcDir}/${config.src.js}` }).map(function (key) {
+    return [key, path.resolve(`${config.srcDir}/${config.src.js}`, key)];
+  });
+  const entryObj = Object.fromEntries(entries);
+  console.log(entryObj);
+  return webpackStream(
+    {
+      // モード値を production に設定すると最適化された状態で、
+      // development に設定するとソースマップ有効でJSファイルが出力される
+      mode: 'development',
+
+      entry: entryObj,
+      output: {
+        filename: '[name]',
+      },
+      plugins: [
+        new webpack.ProvidePlugin({
+          Promise: 'es6-promise',
+        }),
+      ],
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader',
+            },
+          },
+        ],
+      },
+    },
+    webpack
+  ).pipe(gulp.dest(`${config.destDir}/${config.dest.js}`));
 }
 
 // ホットリロード
