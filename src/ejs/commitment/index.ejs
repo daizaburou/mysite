@@ -1,45 +1,42 @@
-<%
-  const pageType = {
-    type: 'commitment'
-    }
-%>
+<% const pageType = { type: 'commitment' } %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('../common/_head', {page: pageType}) %>
   <body>
     <%- include('../common/_header') %>
-      <main>
-        <div class="commitment-main">
-          <div class="commitment-top">
-          </div>
+    <main>
+      <div class="commitment-main">
+        <div class="commitment-top"></div>
+      </div>
+      <div class="main-content">
+        <div class="commitment-hdg">
+          <h1>こだわり</h1>
         </div>
-        <div class="main-content">
+        <div class="commitment-contents -unique01 scroll-fading">
+          <h2>3つのこだわり</h2>
+          <dl class="point-list">
+            <dt><a href="#point-01">1つ目のこだわり</a></dt>
+            <dd>
+              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+            </dd>
+            <dt><a href="#point-02">2つ目のこだわり</a></dt>
+            <dd>
+              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+            </dd>
+            <dt><a href="#point-03">3つ目のこだわり</a></dt>
+            <dd>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</dd>
+          </dl>
+        </div>
+
+        <div class="commitment-wrap">
           <div class="commitment-hdg">
-            <h1>こだわり</h1>
-          </div>
-          <div class="commitment-contents -unique01 scroll-fading">
-            <h2>3つのこだわり</h2>
-            <dl class="point-list">
-              <dt><a href="#point-01">1つ目のこだわり</a></dt>
-              <dd>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</dd>
-              <dt><a href="#point-02">2つ目のこだわり</a></dt>
-              <dd>
-                ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
-              </dd>
-              <dt><a href="#point-03">3つ目のこだわり</a></dt>
-              <dd>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</dd>
-            </dl>
+            <h3 id="point-01" class="align-c">1つ目のこだわり</h3>
           </div>
 
-          <div class="commitment-wrap">
-            <div class="commitment-hdg">
-              <h3 id="point-01" class="align-c">1つ目のこだわり</h3>
-            </div>
+          <div class="flex-container">
+            <p class="scroll-fading -top"><img src="/assets/images/commitment_01.jpg" alt="アスパラガス" /></p>
 
-            <div class="flex-container">
-              <p class="scroll-fading -top"><img src="/assets/images/commitment_01.jpg" alt="アスパラガス"></p>
-
-        <div class=" scroll-fading commitment-box">
+            <div class="scroll-fading commitment-box">
               <p class="scroll-fading -left -late">
                 ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
               </p>
@@ -57,7 +54,7 @@
               </p>
             </div>
 
-            <p class="scroll-fadeing -left"><img src="/assets/images/commitment_02.jpg" alt="牛肉"></p>
+            <p class="scroll-fadeing -left"><img src="/assets/images/commitment_02.jpg" alt="牛肉" /></p>
           </div>
 
           <p class="scroll-fading -right">
@@ -70,29 +67,25 @@
             <h3 id="point-03" class="align-c">3つ目のこだわり</h3>
           </div>
 
-          <p class="image-full scroll-fading -bottom"><img src="/assets/images/commitment_03.jpg" alt=""></p>
+          <p class="image-full scroll-fading -bottom"><img src="/assets/images/commitment_03.jpg" alt="" /></p>
 
           <p class="scroll-fading -right">
             ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
           </p>
 
           <div class="flex-container">
-            <p class="scroll-fading"><img src="/assets/images/commitment_04.jpg" alt="牛肉"></p>
+            <p class="scroll-fading"><img src="/assets/images/commitment_04.jpg" alt="牛肉" /></p>
             <div class="scroll-fading commitment-box">
               <p class="scroll-fading -left -late">
                 ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
               </p>
             </div>
           </div>
-
-
-
         </div>
         <!--commitment-wrap-->
-        </div>
-        <!--main-content-->
-      </main>
-      <%- include('../common/_footer') %>
+      </div>
+      <!--main-content-->
+    </main>
+    <%- include('../common/_footer') %>
   </body>
-
 </html>

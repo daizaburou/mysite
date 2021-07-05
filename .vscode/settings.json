@@ -36,5 +36,9 @@
     },
     "htmlhint.options": {
       "doctype-first": false,
-  }
+  },
+  "html.format.wrapAttributes": "preserve-aligned",
+  "emmet.includeLanguages": {
+    "ejs":"html"
+}
 }

@@ -1,29 +1,26 @@
-<%
-  const pageType = {
-    type: 'blog'
-    }
-%>
+<% const pageType = { type: 'blog' } %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('../common/_head', {page: pageType}) %>
   <body>
     <%- include('../common/_header') %>
-      <main>
-        <div class="main-content">
-          <h1>ブログ</h1>
+    <main>
+      <div class="main-content">
+        <h1>ブログ</h1>
 
-          <div class="contents flex-container col-2">
-            <p class="image-full"><img src="/assets/images/dummy_200.png" alt=""></p>
-            <div>
-              <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー<br>
-                ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー<br>
-                ダミーダミーダミーダミーダミーダミーダミー<br>
-                ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
-            </div>
+        <div class="contents flex-container col-2">
+          <p class="image-full"><img src="/assets/images/dummy_200.png" alt="" /></p>
+          <div>
+            <p>
+              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー<br />
+              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー<br />
+              ダミーダミーダミーダミーダミーダミーダミー<br />
+              ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
+            </p>
           </div>
         </div>
-      </main>
-      <%- include('../common/_footer') %>
+      </div>
+    </main>
+    <%- include('../common/_footer') %>
   </body>
-
 </html>
